@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Cabinet Stephane haddad</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        .hero-image {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1516387938699-a93567ec168e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .gold-text {
+            color: #D4AF37;
+        }
+
+        .gold-border {
+            border-color: #D4AF37;
+        }
+    </style>
+</head>
+
+<body class="font-sans bg-gray-50">
+
+    <nav class="bg-blue-900 text-white sticky top-0 z-50 shadow-lg">
+        <div class="container mx-auto px-4 py-6">
+            <div class="flex justify-between items-center">
+                <!-- Logo / Nom -->
+                <a href="index.html" class="text-lg md:text-xl lg:text-2xl font-bold gold-text">Cabinet Stephane haddad</a>
+
+                <!-- Menu desktop -->
+                <div class="hidden md:flex space-x-4 lg:space-x-8 xl:space-x-12 2xl:space-x-20">
+
+                    <div class="relative group">
+                        <!-- Bouton -->
+                        <button class="flex items-center text-base md:text-lg lg:text-xl hover:text-gray-300">
+                            Le cabinet <i data-feather="chevron-down" class="ml-1"></i>
+                        </button>
+
+                        <!-- Menu déroulant -->
+                        <div
+                            class="absolute left-0 top-full mt-3 w-48 bg-white text-blue-900 rounded-md shadow-lg py-2 hidden group-hover:block">
+                            <a href="activites.html"
+                                class="block px-4 py-2 text-base md:text-lg hover:bg-blue-100">Activités du cabinet</a>
+                            <a href="honoraires.html"
+                                class="block px-4 py-2 text-base md:text-lg hover:bg-blue-100">Honoraires</a>
+                            <a href="dossiers.html"
+                                class="block px-4 py-2 text-base md:text-lg hover:bg-blue-100">Exemples de dossiers</a>
+                        </div>
+                    </div>
+
+                    <!-- Autres liens -->
+                    <a href="publications.html"
+                        class="text-base md:text-lg lg:text-xl hover:text-gray-300">Publications</a>
+                    <a href="faq.html" class="text-base md:text-lg lg:text-xl hover:text-gray-300">FAQ</a>
+                    <a href="contact.html" class="text-base md:text-lg lg:text-xl hover:text-gray-300">Contact</a>
+                </div>
+
+                <!-- Bouton menu mobile -->
+                <button class="md:hidden focus:outline-none" id="mobile-menu-button">
+                    <i data-feather="menu"></i>
+                </button>
+            </div>
+
+            <!-- Menu mobile -->
+            <div class="md:hidden hidden mt-2" id="mobile-menu">
+                <a href="activites.html" class="block py-2 px-2 text-base hover:bg-blue-800">Activités du cabinet</a>
+                <a href="honoraires.html" class="block py-2 px-2 text-base hover:bg-blue-800">Honoraires</a>
+                <a href="dossiers.html" class="block py-2 px-2 text-base hover:bg-blue-800">Exemples de dossiers</a>
+                <a href="publications.html" class="block py-2 px-2 text-base hover:bg-blue-800">Publications</a>
+                <a href="faq.html" class="block py-2 px-2 text-base hover:bg-blue-800">FAQ</a>
+                <a href="contact.html" class="block py-2 px-2 text-base hover:bg-blue-800">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-image text-white py-32">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6" data-aos="fade-up">Contactez-nous</h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+                Prenez rendez-vous pour une consultation personnalisée
+            </p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row">
+                <!-- Contact Form -->
+                <div class="md:w-1/2 md:pr-8 mb-12 md:mb-0" data-aos="fade-right">
+                    <h2 class="text-3xl font-bold text-blue-900 mb-6">Envoyez-nous un message</h2>
+                    <form class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-gray-700 mb-2">Nom complet</label>
+                            <input type="text" id="name"
+                                class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-900">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-gray-700 mb-2">Email</label>
+                            <input type="email" id="email"
+                                class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-900">
+                        </div>
+                        <div>
+                            <label for="phone" class="block text-gray-700 mb-2">Téléphone</label>
+                            <input type="tel" id="phone"
+                                class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-900">
+                        </div>
+                        <div>
+                            <label for="subject" class="block text-gray-700 mb-2">Sujet</label>
+                            <select id="subject"
+                                class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-900">
+                                <option value="">Sélectionnez un sujet</option>
+                                <option value="fiscal">Conseil fiscal</option>
+                                <option value="business">Droit des affaires</option>
+                                <option value="patrimonial">Droit patrimonial</option>
+                                <option value="other">Autre</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="message" class="block text-gray-700 mb-2">Message</label>
+                            <textarea id="message" rows="5"
+                                class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-900"></textarea>
+                        </div>
+                        <button type="submit"
+                            class="bg-blue-900 hover:bg-blue-800 text-white font-bold py-3 px-8 rounded transition duration-300">
+                            Envoyer le message
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="md:w-1/2 md:pl-8" data-aos="fade-left">
+                    <h2 class="text-3xl font-bold text-blue-900 mb-6">Informations de contact</h2>
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="text-blue-900 mr-4">
+                                <i data-feather="map-pin" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold text-blue-900 mb-2">Adresse</h3>
+                                <p class="text-gray-700">3 Av. Saint-Honoré d'Eylau, 75116 Paris</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="text-blue-900 mr-4">
+                                <i data-feather="phone" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold text-blue-900 mb-2">Téléphone</h3>
+                                <p class="text-gray-700">+33 1 56 79 00 20</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="text-blue-900 mr-4">
+                                <i data-feather="mail" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold text-blue-900 mb-2">Email</h3>
+                                <p class="text-gray-700">contact@cabinet-haddad.com</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="mt-8">
+                        <h3 class="text-xl font-semibold text-blue-900 mb-4">Plan d'accès</h3>
+                        <div class="rounded-lg overflow-hidden h-64 md:h-80 lg:h-80">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.303514552345!2d2.285280215674088!3d48.868631979288954!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66fc918e46f1d%3A0xe4e2f7fbd2e1a17b!2s3%20Av.%20Saint-Honor%C3%A9%20d'Eylau%2C%2075116%20Paris!5e0!3m2!1sfr!2sfr!4v1693927567890!5m2!1sfr!2sfr"
+                                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold gold-text mb-4">Cabinet Stephane Haddad</h3>
+                    <p class="mb-4">
+                        Cabinet d'avocat spécialisé en droit fiscal et droit des affaires à Paris.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i data-feather="linkedin"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i data-feather="twitter"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold gold-text mb-4">Navigation</h3>
+                    <ul class="space-y-2">
+                        <li><a href="activites.html" class="hover:text-gray-300">Activités du cabinet</a></li>
+                        <li><a href="honoraires.html" class="hover:text-gray-300">Honoraires</a></li>
+                        <li><a href="dossiers.html" class="hover:text-gray-300">Exemples de dossiers</a></li>
+                        <li><a href="publications.html" class="hover:text-gray-300">Publications</a></li>
+                        <li><a href="faq.html" class="hover:text-gray-300">FAQ</a></li>
+                        <li><a href="contact.html" class="hover:text-gray-300">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold gold-text mb-4">Contact</h3>
+                    <address class="not-italic">
+                        <p class="mb-2"><i data-feather="map-pin" class="inline mr-2"></i> 3 Av. Saint-Honoré d'Eylau,
+                            75116 Paris</p>
+                        <p class="mb-2"><i data-feather="phone" class="inline mr-2"></i> +33 1 56 79 00 20</p>
+                        <p class="mb-2"><i data-feather="mail" class="inline mr-2"></i> contact@cabinet-haddad.com</p>
+                    </address>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 Cabinet Stephane Haddad. Tous droits réservés.</p>
+                <p class="mt-2"><a href="mentions-legales.html" class="hover:text-gray-300">Mentions légales</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function () {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        feather.replace();
+    </script>
+</body>
+
+</html>
