@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FAQ - Cabinet Stephane Haddad - Avocat en Droit Fiscal et Droit des Affaires</title>
+    <title>FAQ - Cabinet Stéphane Haddad - Avocat en Droit Fiscal et Droit des Affaires</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -64,20 +64,31 @@
         <div class="container mx-auto px-4 py-6">
             <div class="flex justify-between items-center">
                 <!-- Logo / Nom -->
-                <a href="index.html" class="text-lg md:text-xl lg:text-2xl font-bold gold-text">Cabinet Stephane
+                <a href="index.html" class="text-lg md:text-xl lg:text-2xl font-bold gold-text">Cabinet Stéphane
                     Haddad</a>
+
 
                 <!-- Menu desktop -->
                 <div class="hidden md:flex space-x-4 lg:space-x-8 xl:space-x-12 2xl:space-x-20">
-                    <div class="relative group">
-                        <!-- Bouton -->
-                        <button class="flex items-center text-base md:text-lg lg:text-xl hover:text-gray-300">
+
+
+                    <!-- wrapper : assure-toi que c'est inséré à l'endroit de ton menu "Le cabinet" -->
+                    <div class="relative group cabinet-dropdown">
+                        <!-- checkbox cachée si tu veux aussi le clic -->
+                        <input type="checkbox" id="dropdown-cabinet" class="peer hidden">
+
+                        <!-- Bouton (label si checkbox utilisée) -->
+                        <label for="dropdown-cabinet"
+                            class="flex items-center text-base md:text-lg lg:text-xl hover:text-gray-300 cursor-pointer select-none">
                             Le cabinet <i data-feather="chevron-down" class="ml-1"></i>
-                        </button>
+                        </label>
 
                         <!-- Menu déroulant -->
-                        <div
-                            class="absolute left-0 top-full mt-3 w-48 bg-white text-blue-900 rounded-md shadow-lg py-2 hidden group-hover:block">
+                        <div class="absolute left-0 top-full mt-0 w-56 bg-white text-blue-900 rounded-md shadow-lg py-2 z-50
+           opacity-0 invisible 
+           group-hover:opacity-100 group-hover:visible 
+           peer-checked:opacity-100 peer-checked:visible 
+           transition-opacity duration-150 pointer-events-auto">
                             <a href="activites.html"
                                 class="block px-4 py-2 text-base md:text-lg hover:bg-blue-100">Activités du cabinet</a>
                             <a href="honoraires.html"
@@ -90,8 +101,7 @@
                     <!-- Autres liens -->
                     <a href="publications.html"
                         class="text-base md:text-lg lg:text-xl hover:text-gray-300">Publications</a>
-                    <a href="faq.html"
-                        class="text-base md:text-lg lg:text-xl hover:text-gray-300 font-semibold gold-text">FAQ</a>
+                    <a href="faq.html" class="text-base md:text-lg lg:text-xl hover:text-gray-300">FAQ</a>
                     <a href="contact.html" class="text-base md:text-lg lg:text-xl hover:text-gray-300">Contact</a>
                 </div>
 
@@ -107,11 +117,13 @@
                 <a href="honoraires.html" class="block py-2 px-2 text-base hover:bg-blue-800">Honoraires</a>
                 <a href="dossiers.html" class="block py-2 px-2 text-base hover:bg-blue-800">Exemples de dossiers</a>
                 <a href="publications.html" class="block py-2 px-2 text-base hover:bg-blue-800">Publications</a>
-                <a href="faq.html" class="block py-2 px-2 text-base hover:bg-blue-800 font-semibold gold-text">FAQ</a>
+                <a href="faq.html" class="block py-2 px-2 text-base hover:bg-blue-800">FAQ</a>
                 <a href="contact.html" class="block py-2 px-2 text-base hover:bg-blue-800">Contact</a>
             </div>
         </div>
     </nav>
+
+
 
     <!-- Hero Section -->
     <section class="hero-image text-white py-32">
@@ -1125,7 +1137,7 @@
         <div class="container mx-auto px-4">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div>
-                    <h3 class="text-xl font-bold gold-text mb-4">Cabinet Stephane Haddad</h3>
+                    <h3 class="text-xl font-bold gold-text mb-4">Cabinet Stéphane Haddad</h3>
                     <p class="mb-4">
                         Cabinet d'avocat spécialisé en droit fiscal et droit des affaires à Paris.
                     </p>
@@ -1160,7 +1172,7 @@
                 </div>
             </div>
             <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-                <p>&copy; 2025 Cabinet Stephane Haddad. Tous droits réservés.</p>
+                <p>&copy; 2025 Cabinet Stéphane Haddad. Tous droits réservés.</p>
                 <p class="mt-2"><a href="mentions-legales.html" class="hover:text-gray-300">Mentions légales</a></p>
             </div>
         </div>
@@ -1203,5 +1215,21 @@
         feather.replace();
     </script>
 </body>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const dropdown = document.querySelector('.cabinet-dropdown');
+        const checkbox = document.getElementById('dropdown-cabinet');
+
+        if (dropdown && checkbox) {
+            document.addEventListener('click', (e) => {
+                // Si on clique en dehors du dropdown -> fermer
+                if (!dropdown.contains(e.target)) {
+                    checkbox.checked = false;
+                }
+            });
+        }
+    });
+</script>
 
 </html>

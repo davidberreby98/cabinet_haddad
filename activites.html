@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Activités du cabinet - Stephane Haddad Avocat</title>
+    <title>Activités du cabinet - Stéphane Haddad Avocat</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -44,24 +44,43 @@
         <div class="container mx-auto px-4 py-6">
             <div class="flex justify-between items-center">
                 <!-- Logo / Nom -->
-                <a href="index.html" class="text-lg md:text-xl lg:text-2xl font-bold gold-text">Cabinet Stephane haddad</a>
+                <a href="index.html" class="text-lg md:text-xl lg:text-2xl font-bold gold-text">Cabinet Stéphane
+                    Haddad</a>
+
 
                 <!-- Menu desktop -->
                 <div class="hidden md:flex space-x-4 lg:space-x-8 xl:space-x-12 2xl:space-x-20">
-                    <div class="relative group">
-                        <!-- Bouton -->
-                        <button class="flex items-center text-base md:text-lg lg:text-xl hover:text-gray-300">
+
+
+                    <!-- wrapper : assure-toi que c'est inséré à l'endroit de ton menu "Le cabinet" -->
+                    <div class="relative group cabinet-dropdown">
+                        <!-- checkbox cachée si tu veux aussi le clic -->
+                        <input type="checkbox" id="dropdown-cabinet" class="peer hidden">
+
+                        <!-- Bouton (label si checkbox utilisée) -->
+                        <label for="dropdown-cabinet"
+                            class="flex items-center text-base md:text-lg lg:text-xl hover:text-gray-300 cursor-pointer select-none">
                             Le cabinet <i data-feather="chevron-down" class="ml-1"></i>
-                        </button>
+                        </label>
+
                         <!-- Menu déroulant -->
-                        <div class="absolute left-0 top-full mt-3 w-48 bg-white text-blue-900 rounded-md shadow-lg py-2 hidden group-hover:block">
-                            <a href="activites.html" class="block px-4 py-2 text-base md:text-lg hover:bg-blue-100 font-semibold">Activités du cabinet</a>
-                            <a href="honoraires.html" class="block px-4 py-2 text-base md:text-lg hover:bg-blue-100">Honoraires</a>
-                            <a href="dossiers.html" class="block px-4 py-2 text-base md:text-lg hover:bg-blue-100">Exemples de dossiers</a>
+                        <div class="absolute left-0 top-full mt-0 w-56 bg-white text-blue-900 rounded-md shadow-lg py-2 z-50
+           opacity-0 invisible 
+           group-hover:opacity-100 group-hover:visible 
+           peer-checked:opacity-100 peer-checked:visible 
+           transition-opacity duration-150 pointer-events-auto">
+                            <a href="activites.html"
+                                class="block px-4 py-2 text-base md:text-lg hover:bg-blue-100">Activités du cabinet</a>
+                            <a href="honoraires.html"
+                                class="block px-4 py-2 text-base md:text-lg hover:bg-blue-100">Honoraires</a>
+                            <a href="dossiers.html"
+                                class="block px-4 py-2 text-base md:text-lg hover:bg-blue-100">Exemples de dossiers</a>
                         </div>
                     </div>
+
                     <!-- Autres liens -->
-                    <a href="publications.html" class="text-base md:text-lg lg:text-xl hover:text-gray-300">Publications</a>
+                    <a href="publications.html"
+                        class="text-base md:text-lg lg:text-xl hover:text-gray-300">Publications</a>
                     <a href="faq.html" class="text-base md:text-lg lg:text-xl hover:text-gray-300">FAQ</a>
                     <a href="contact.html" class="text-base md:text-lg lg:text-xl hover:text-gray-300">Contact</a>
                 </div>
@@ -74,7 +93,7 @@
 
             <!-- Menu mobile -->
             <div class="md:hidden hidden mt-2" id="mobile-menu">
-                <a href="activites.html" class="block py-2 px-2 text-base hover:bg-blue-800 font-semibold">Activités du cabinet</a>
+                <a href="activites.html" class="block py-2 px-2 text-base hover:bg-blue-800">Activités du cabinet</a>
                 <a href="honoraires.html" class="block py-2 px-2 text-base hover:bg-blue-800">Honoraires</a>
                 <a href="dossiers.html" class="block py-2 px-2 text-base hover:bg-blue-800">Exemples de dossiers</a>
                 <a href="publications.html" class="block py-2 px-2 text-base hover:bg-blue-800">Publications</a>
@@ -83,6 +102,7 @@
             </div>
         </div>
     </nav>
+
 
     <!-- Hero Section -->
     <section class="hero-image text-white py-32">
@@ -100,7 +120,8 @@
             <nav class="flex" aria-label="Breadcrumb">
                 <ol class="inline-flex items-center space-x-1 md:space-x-3">
                     <li class="inline-flex items-center">
-                        <a href="index.html" class="inline-flex items-center text-sm font-medium text-gray-700 hover:text-blue-600">
+                        <a href="index.html"
+                            class="inline-flex items-center text-sm font-medium text-gray-700 hover:text-blue-600">
                             <i data-feather="home" class="w-4 h-4 mr-2"></i>
                             Accueil
                         </a>
@@ -122,7 +143,8 @@
             <div class="max-w-4xl mx-auto text-center mb-16" data-aos="fade-up">
                 <h2 class="text-3xl font-bold text-blue-900 mb-6">Domaines d'intervention</h2>
                 <p class="text-lg text-gray-700">
-                    Le cabinet Stéphane Haddad propose une gamme complète de services juridiques spécialisés en droit fiscal et droit des affaires, 
+                    Le cabinet Stéphane Haddad propose une gamme complète de services juridiques spécialisés en droit
+                    fiscal et droit des affaires,
                     adaptés aux besoins des particuliers, des entrepreneurs et des entreprises.
                 </p>
             </div>
@@ -135,38 +157,44 @@
                     </div>
                     <h3 class="text-2xl font-bold text-blue-900">Droit Fiscal</h3>
                 </div>
-                
+
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <!-- Card 1 -->
-                    <div class="bg-gray-50 rounded-lg p-6 shadow-md service-card transition duration-300 hover:border-blue-900 border border-transparent">
+                    <div
+                        class="bg-gray-50 rounded-lg p-6 shadow-md service-card transition duration-300 hover:border-blue-900 border border-transparent">
                         <div class="text-blue-900 mb-4">
                             <i data-feather="file-text" class="w-10 h-10"></i>
                         </div>
                         <h4 class="text-xl font-semibold text-blue-900 mb-3">Conseil fiscal</h4>
                         <p class="text-gray-700">
-                            Analyse et optimisation de votre situation fiscale, conseils stratégiques pour minimiser les impôts dans le respect de la légalité.
+                            Analyse et optimisation de votre situation fiscale, conseils stratégiques pour minimiser les
+                            impôts dans le respect de la légalité.
                         </p>
                     </div>
-                    
+
                     <!-- Card 2 -->
-                    <div class="bg-gray-50 rounded-lg p-6 shadow-md service-card transition duration-300 hover:border-blue-900 border border-transparent">
+                    <div
+                        class="bg-gray-50 rounded-lg p-6 shadow-md service-card transition duration-300 hover:border-blue-900 border border-transparent">
                         <div class="text-blue-900 mb-4">
                             <i data-feather="shield" class="w-10 h-10"></i>
                         </div>
                         <h4 class="text-xl font-semibold text-blue-900 mb-3">Contentieux fiscal</h4>
                         <p class="text-gray-700">
-                            Défense devant l'administration fiscale et les juridictions compétentes en cas de contrôle, redressement ou litige fiscal.
+                            Défense devant l'administration fiscale et les juridictions compétentes en cas de contrôle,
+                            redressement ou litige fiscal.
                         </p>
                     </div>
-                    
+
                     <!-- Card 3 -->
-                    <div class="bg-gray-50 rounded-lg p-6 shadow-md service-card transition duration-300 hover:border-blue-900 border border-transparent">
+                    <div
+                        class="bg-gray-50 rounded-lg p-6 shadow-md service-card transition duration-300 hover:border-blue-900 border border-transparent">
                         <div class="text-blue-900 mb-4">
                             <i data-feather="globe" class="w-10 h-10"></i>
                         </div>
                         <h4 class="text-xl font-semibold text-blue-900 mb-3">Fiscalité internationale</h4>
                         <p class="text-gray-700">
-                            Gestion des problématiques fiscales transfrontalières, conventions fiscales internationales, optimisation des structures internationales.
+                            Gestion des problématiques fiscales transfrontalières, conventions fiscales internationales,
+                            optimisation des structures internationales.
                         </p>
                     </div>
                 </div>
@@ -180,38 +208,44 @@
                     </div>
                     <h3 class="text-2xl font-bold text-blue-900">Droit des Affaires</h3>
                 </div>
-                
+
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <!-- Card 1 -->
-                    <div class="bg-gray-50 rounded-lg p-6 shadow-md service-card transition duration-300 hover:border-blue-900 border border-transparent">
+                    <div
+                        class="bg-gray-50 rounded-lg p-6 shadow-md service-card transition duration-300 hover:border-blue-900 border border-transparent">
                         <div class="text-blue-900 mb-4">
                             <i data-feather="layers" class="w-10 h-10"></i>
                         </div>
                         <h4 class="text-xl font-semibold text-blue-900 mb-3">Création et structuration</h4>
                         <p class="text-gray-700">
-                            Conseil dans le choix de la structure juridique, rédaction des statuts, formalités de création et organisation des sociétés.
+                            Conseil dans le choix de la structure juridique, rédaction des statuts, formalités de
+                            création et organisation des sociétés.
                         </p>
                     </div>
-                    
+
                     <!-- Card 2 -->
-                    <div class="bg-gray-50 rounded-lg p-6 shadow-md service-card transition duration-300 hover:border-blue-900 border border-transparent">
+                    <div
+                        class="bg-gray-50 rounded-lg p-6 shadow-md service-card transition duration-300 hover:border-blue-900 border border-transparent">
                         <div class="text-blue-900 mb-4">
                             <i data-feather="refresh-cw" class="w-10 h-10"></i>
                         </div>
                         <h4 class="text-xl font-semibold text-blue-900 mb-3">Fusions & Acquisitions</h4>
                         <p class="text-gray-700">
-                            Accompagnement dans les opérations de croissance externe, due diligence, négociation et rédaction des actes.
+                            Accompagnement dans les opérations de croissance externe, due diligence, négociation et
+                            rédaction des actes.
                         </p>
                     </div>
-                    
+
                     <!-- Card 3 -->
-                    <div class="bg-gray-50 rounded-lg p-6 shadow-md service-card transition duration-300 hover:border-blue-900 border border-transparent">
+                    <div
+                        class="bg-gray-50 rounded-lg p-6 shadow-md service-card transition duration-300 hover:border-blue-900 border border-transparent">
                         <div class="text-blue-900 mb-4">
                             <i data-feather="file" class="w-10 h-10"></i>
                         </div>
                         <h4 class="text-xl font-semibold text-blue-900 mb-3">Contrats commerciaux</h4>
                         <p class="text-gray-700">
-                            Rédaction et négociation de tous types de contrats (distribution, franchise, partenariat, confidentialité, etc.).
+                            Rédaction et négociation de tous types de contrats (distribution, franchise, partenariat,
+                            confidentialité, etc.).
                         </p>
                     </div>
                 </div>
@@ -222,7 +256,8 @@
                 <div class="max-w-4xl mx-auto text-center">
                     <h3 class="text-2xl font-bold text-blue-900 mb-6">Notre approche</h3>
                     <p class="text-lg text-gray-700 mb-6">
-                        Notre cabinet privilégie une approche personnalisée et pragmatique, combinant expertise technique et connaissance approfondie de votre secteur d'activité.
+                        Notre cabinet privilégie une approche personnalisée et pragmatique, combinant expertise
+                        technique et connaissance approfondie de votre secteur d'activité.
                     </p>
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                         <div class="bg-white p-6 rounded-lg shadow-sm">
@@ -253,7 +288,9 @@
             <p class="text-xl mb-8 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">
                 Contactez-nous pour un premier entretien sans engagement.
             </p>
-            <a href="contact.html" class="bg-white hover:bg-gray-100 text-blue-900 font-bold py-3 px-8 rounded transition duration-300 inline-flex items-center justify-center" data-aos="fade-up" data-aos-delay="200">
+            <a href="contact.html"
+                class="bg-white hover:bg-gray-100 text-blue-900 font-bold py-3 px-8 rounded transition duration-300 inline-flex items-center justify-center"
+                data-aos="fade-up" data-aos-delay="200">
                 Prendre rendez-vous <i data-feather="calendar" class="ml-2"></i>
             </a>
         </div>
@@ -264,7 +301,7 @@
         <div class="container mx-auto px-4">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div>
-                    <h3 class="text-xl font-bold gold-text mb-4">Cabinet Stephane Haddad</h3>
+                    <h3 class="text-xl font-bold gold-text mb-4">Cabinet Stéphane Haddad</h3>
                     <p class="mb-4">
                         Cabinet d'avocat spécialisé en droit fiscal et droit des affaires à Paris.
                     </p>
@@ -291,14 +328,15 @@
                 <div>
                     <h3 class="text-xl font-bold gold-text mb-4">Contact</h3>
                     <address class="not-italic">
-                        <p class="mb-2"><i data-feather="map-pin" class="inline mr-2"></i> 3 Av. Saint-Honoré d'Eylau, 75116 Paris</p>
+                        <p class="mb-2"><i data-feather="map-pin" class="inline mr-2"></i> 3 Av. Saint-Honoré d'Eylau,
+                            75116 Paris</p>
                         <p class="mb-2"><i data-feather="phone" class="inline mr-2"></i> +33 1 56 79 00 20</p>
                         <p class="mb-2"><i data-feather="mail" class="inline mr-2"></i> contact@cabinet-haddad.com</p>
                     </address>
                 </div>
             </div>
             <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-                <p>&copy; 2025 Cabinet Stephane Haddad. Tous droits réservés.</p>
+                <p>&copy; 2025 Cabinet Stéphane Haddad. Tous droits réservés.</p>
                 <p class="mt-2"><a href="mentions-legales.html" class="hover:text-gray-300">Mentions légales</a></p>
             </div>
         </div>
@@ -320,5 +358,21 @@
         feather.replace();
     </script>
 </body>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const dropdown = document.querySelector('.cabinet-dropdown');
+        const checkbox = document.getElementById('dropdown-cabinet');
+
+        if (dropdown && checkbox) {
+            document.addEventListener('click', (e) => {
+                // Si on clique en dehors du dropdown -> fermer
+                if (!dropdown.contains(e.target)) {
+                    checkbox.checked = false;
+                }
+            });
+        }
+    });
+</script>
 
 </html>
