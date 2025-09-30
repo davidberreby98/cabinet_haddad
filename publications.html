@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activités du cabinet - Stéphane Haddad Avocat</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        .hero-image {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+
+        .gold-text {
+            color: #D4AF37;
+        }
+
+        .gold-border {
+            border-color: #D4AF37;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+
+<body class="font-sans bg-gray-50">
+
+    <nav class="bg-blue-900 text-white sticky top-0 z-50 shadow-lg">
+        <div class="container mx-auto px-4 py-6">
+            <div class="flex justify-between items-center">
+                <!-- Logo / Nom -->
+                <a href="index.html" class="text-lg md:text-xl lg:text-2xl font-bold gold-text">Cabinet Stéphane
+                    Haddad</a>
+
+
+                <!-- Menu desktop -->
+                <div class="hidden md:flex space-x-4 lg:space-x-8 xl:space-x-12 2xl:space-x-20">
+
+
+                    <!-- wrapper : assure-toi que c'est inséré à l'endroit de ton menu "Le cabinet" -->
+                    <div class="relative group cabinet-dropdown">
+                        <!-- checkbox cachée si tu veux aussi le clic -->
+                        <input type="checkbox" id="dropdown-cabinet" class="peer hidden">
+
+                        <!-- Bouton (label si checkbox utilisée) -->
+                        <label for="dropdown-cabinet"
+                            class="flex items-center text-base md:text-lg lg:text-xl hover:text-gray-300 cursor-pointer select-none">
+                            Le cabinet <i data-feather="chevron-down" class="ml-1"></i>
+                        </label>
+
+                        <!-- Menu déroulant -->
+                        <div class="absolute left-0 top-full mt-0 w-56 bg-white text-blue-900 rounded-md shadow-lg py-2 z-50
+           opacity-0 invisible 
+           group-hover:opacity-100 group-hover:visible 
+           peer-checked:opacity-100 peer-checked:visible 
+           transition-opacity duration-150 pointer-events-auto">
+                            <a href="activites.html"
+                                class="block px-4 py-2 text-base md:text-lg hover:bg-blue-100">Activités du cabinet</a>
+                            <a href="honoraires.html"
+                                class="block px-4 py-2 text-base md:text-lg hover:bg-blue-100">Honoraires</a>
+                            <a href="dossiers.html"
+                                class="block px-4 py-2 text-base md:text-lg hover:bg-blue-100">Exemples de dossiers</a>
+                        </div>
+                    </div>
+
+                    <!-- Autres liens -->
+                    <a href="publications.html"
+                        class="text-base md:text-lg lg:text-xl hover:text-gray-300">Publications</a>
+                    <a href="faq.html" class="text-base md:text-lg lg:text-xl hover:text-gray-300">FAQ</a>
+                    <a href="contact.html" class="text-base md:text-lg lg:text-xl hover:text-gray-300">Contact</a>
+                </div>
+
+                <!-- Bouton menu mobile -->
+                <button class="md:hidden focus:outline-none" id="mobile-menu-button">
+                    <i data-feather="menu"></i>
+                </button>
+            </div>
+
+            <!-- Menu mobile -->
+            <div class="md:hidden hidden mt-2" id="mobile-menu">
+                <a href="activites.html" class="block py-2 px-2 text-base hover:bg-blue-800">Activités du cabinet</a>
+                <a href="honoraires.html" class="block py-2 px-2 text-base hover:bg-blue-800">Honoraires</a>
+                <a href="dossiers.html" class="block py-2 px-2 text-base hover:bg-blue-800">Exemples de dossiers</a>
+                <a href="publications.html" class="block py-2 px-2 text-base hover:bg-blue-800">Publications</a>
+                <a href="faq.html" class="block py-2 px-2 text-base hover:bg-blue-800">FAQ</a>
+                <a href="contact.html" class="block py-2 px-2 text-base hover:bg-blue-800">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Hero Section -->
+    <section class="hero-image text-white py-32">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6" data-aos="fade-up">Activités du cabinet</h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+                Expertise en droit fiscal et droit des affaires
+            </p>
+        </div>
+    </section>
+
+
+   <!-- Featured Articles -->
+    <section id="articles" class="py-16 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-gray-800 mb-4">Articles récents</h2>
+            <p class="text-gray-600 max-w-2xl mx-auto">
+                Nos dernières publications sur des sujets juridiques d'actualité et des conseils pratiques.
+            </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Article 1 -->
+            <a href="article1.html" class="article-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+                <div class="h-48 bg-gray-200 overflow-hidden">
+                    <img src="http://static.photos/legal/640x360/1" alt="Droit des contrats" class="w-full h-full object-cover">
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center text-sm text-gray-500 mb-2">
+                        <span>Droit des affaires</span>
+                        <span class="mx-2">•</span>
+                        <span>15 mai 2023</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Les pièges à éviter dans la rédaction des contrats</h3>
+                    <p class="text-gray-600 mb-4">
+                        Découvrez les clauses essentielles à inclure et les erreurs courantes à éviter lors de la rédaction de vos contrats commerciaux.
+                    </p>
+                    <div class="flex items-center text-blue-600 font-medium">
+                        Lire l'article
+                        <i data-feather="arrow-right" class="ml-2 w-4 h-4"></i>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Article 2 -->
+            <a href="article2.html" class="article-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+                <div class="h-48 bg-gray-200 overflow-hidden">
+                    <img src="http://static.photos/legal/640x360/2" alt="Divorce" class="w-full h-full object-cover">
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center text-sm text-gray-500 mb-2">
+                        <span>Droit de la famille</span>
+                        <span class="mx-2">•</span>
+                        <span>8 mai 2023</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Les nouvelles dispositions sur le divorce par consentement mutuel</h3>
+                    <p class="text-gray-600 mb-4">
+                        Analyse des récentes réformes législatives et leurs implications pratiques pour les couples souhaitant divorcer à l'amiable.
+                    </p>
+                    <div class="flex items-center text-blue-600 font-medium">
+                        Lire l'article
+                        <i data-feather="arrow-right" class="ml-2 w-4 h-4"></i>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Article 3 -->
+            <a href="#" class="article-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+                <div class="h-48 bg-gray-200 overflow-hidden">
+                    <img src="http://static.photos/legal/640x360/3" alt="Propriété intellectuelle" class="w-full h-full object-cover">
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center text-sm text-gray-500 mb-2">
+                        <span>Propriété intellectuelle</span>
+                        <span class="mx-2">•</span>
+                        <span>1 mai 2023</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Protéger ses créations : le guide complet du droit d'auteur</h3>
+                    <p class="text-gray-600 mb-4">
+                        Tout ce que les créateurs et entrepreneurs doivent savoir pour protéger efficacement leurs œuvres et innovations.
+                    </p>
+                    <div class="flex items-center text-blue-600 font-medium">
+                        Lire l'article
+                        <i data-feather="arrow-right" class="ml-2 w-4 h-4"></i>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div class="text-center mt-12">
+            <a href="#" class="inline-flex items-center px-6 py-3 border border-gray-300 text-gray-700 font-medium rounded-md hover:bg-gray-50 transition duration-300">
+                Voir tous les articles
+                <i data-feather="chevron-down" class="ml-2 w-4 h-4"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="bg-gray-100 py-16">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="bg-white p-8 rounded-lg shadow-sm">
+                <i data-feather="mail" class="mx-auto w-12 h-12 text-blue-600 mb-4"></i>
+                <h2 class="text-2xl font-bold text-gray-800 mb-2">Restez informé</h2>
+                <p class="text-gray-600 mb-6 max-w-2xl mx-auto">
+                    Abonnez-vous à notre newsletter pour recevoir nos derniers articles et des conseils juridiques directement dans votre boîte mail.
+                </p>
+                <form class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+                    <input type="email" placeholder="Votre adresse email" class="flex-grow px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <button type="submit" class="bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700 transition duration-300">
+                        S'abonner
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold text-blue-900 mb-6" data-aos="fade-up">Vous avez une question juridique ?</h2>
+            <p class="text-xl text-gray-700 mb-8 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+                Mon cabinet est à votre disposition pour répondre à vos interrogations et vous accompagner dans vos
+                projets.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4" data-aos="fade-up" data-aos-delay="200">
+                <a href="contact.html"
+                    class="bg-blue-900 hover:bg-blue-800 text-white font-bold py-3 px-8 rounded transition duration-300 inline-flex items-center justify-center">
+                    Prendre rendez-vous <i data-feather="calendar" class="ml-2"></i>
+                </a>
+                <a href="faq.html"
+                    class="bg-transparent border-2 border-blue-900 text-blue-900 hover:bg-blue-900 hover:text-white font-bold py-3 px-8 rounded transition duration-300 inline-flex items-center justify-center">
+                    Consulter la FAQ <i data-feather="help-circle" class="ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold gold-text mb-4">Cabinet Stéphane Haddad</h3>
+                    <p class="mb-4">
+                        Cabinet d'avocat spécialisé en droit fiscal et droit des affaires à Paris.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i data-feather="linkedin"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i data-feather="twitter"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold gold-text mb-4">Navigation</h3>
+                    <ul class="space-y-2">
+                        <li><a href="activites.html" class="hover:text-gray-300">Activités du cabinet</a></li>
+                        <li><a href="honoraires.html" class="hover:text-gray-300">Honoraires</a></li>
+                        <li><a href="dossiers.html" class="hover:text-gray-300">Exemples de dossiers</a></li>
+                        <li><a href="publications.html" class="hover:text-gray-300">Publications</a></li>
+                        <li><a href="faq.html" class="hover:text-gray-300">FAQ</a></li>
+                        <li><a href="contact.html" class="hover:text-gray-300">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold gold-text mb-4">Contact</h3>
+                    <address class="not-italic">
+                        <p class="mb-2"><i data-feather="map-pin" class="inline mr-2"></i> 3 Av. Saint-Honoré d'Eylau,
+                            75116 Paris</p>
+                        <p class="mb-2"><i data-feather="phone" class="inline mr-2"></i> +33 1 56 79 00 20</p>
+                        <p class="mb-2"><i data-feather="mail" class="inline mr-2"></i> contact@cabinet-haddad.com</p>
+                    </address>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 Cabinet Stéphane Haddad. Tous droits réservés.</p>
+                <p class="mt-2"><a href="mentions-legales.html" class="hover:text-gray-300">Mentions légales</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function () {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        feather.replace();
+    </script>
+</body>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const dropdown = document.querySelector('.cabinet-dropdown');
+        const checkbox = document.getElementById('dropdown-cabinet');
+
+        if (dropdown && checkbox) {
+            document.addEventListener('click', (e) => {
+                // Si on clique en dehors du dropdown -> fermer
+                if (!dropdown.contains(e.target)) {
+                    checkbox.checked = false;
+                }
+            });
+        }
+    });
+</script>
+
+</html>
