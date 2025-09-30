@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cabinet Stéphane haddad - Avocat en Droit Fiscal et Droit des Affaires</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        .hero-image {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+
+        .gold-text {
+            color: #D4AF37;
+        }
+
+        .gold-border {
+            border-color: #D4AF37;
+        }
+    </style>
+</head>
+
+<body class="font-sans bg-gray-50">
+
+    <nav class="bg-blue-900 text-white sticky top-0 z-50 shadow-lg">
+        <div class="container mx-auto px-4 py-6">
+            <div class="flex justify-between items-center">
+                <!-- Logo / Nom -->
+                <a href="index.html" class="text-lg md:text-xl lg:text-2xl font-bold gold-text">Cabinet Stéphane
+                    Haddad</a>
+
+
+                <!-- Menu desktop -->
+                <div class="hidden md:flex space-x-4 lg:space-x-8 xl:space-x-12 2xl:space-x-20">
+
+
+                    <!-- wrapper : assure-toi que c'est inséré à l'endroit de ton menu "Le cabinet" -->
+                    <div class="relative group cabinet-dropdown">
+                        <!-- checkbox cachée si tu veux aussi le clic -->
+                        <input type="checkbox" id="dropdown-cabinet" class="peer hidden">
+
+                        <!-- Bouton (label si checkbox utilisée) -->
+                        <label for="dropdown-cabinet"
+                            class="flex items-center text-base md:text-lg lg:text-xl hover:text-gray-300 cursor-pointer select-none">
+                            Le cabinet <i data-feather="chevron-down" class="ml-1"></i>
+                        </label>
+
+                        <!-- Menu déroulant -->
+                        <div class="absolute left-0 top-full mt-0 w-56 bg-white text-blue-900 rounded-md shadow-lg py-2 z-50
+           opacity-0 invisible 
+           group-hover:opacity-100 group-hover:visible 
+           peer-checked:opacity-100 peer-checked:visible 
+           transition-opacity duration-150 pointer-events-auto">
+                            <a href="activites.html"
+                                class="block px-4 py-2 text-base md:text-lg hover:bg-blue-100">Activités du cabinet</a>
+                            <a href="honoraires.html"
+                                class="block px-4 py-2 text-base md:text-lg hover:bg-blue-100">Honoraires</a>
+                            <a href="dossiers.html"
+                                class="block px-4 py-2 text-base md:text-lg hover:bg-blue-100">Exemples de dossiers</a>
+                        </div>
+                    </div>
+
+                    <!-- Autres liens -->
+                    <a href="publications.html"
+                        class="text-base md:text-lg lg:text-xl hover:text-gray-300">Publications</a>
+                    <a href="faq.html" class="text-base md:text-lg lg:text-xl hover:text-gray-300">FAQ</a>
+                    <a href="contact.html" class="text-base md:text-lg lg:text-xl hover:text-gray-300">Contact</a>
+                </div>
+
+                <!-- Bouton menu mobile -->
+                <button class="md:hidden focus:outline-none" id="mobile-menu-button">
+                    <i data-feather="menu"></i>
+                </button>
+            </div>
+
+            <!-- Menu mobile -->
+            <div class="md:hidden hidden mt-2" id="mobile-menu">
+                <a href="activites.html" class="block py-2 px-2 text-base hover:bg-blue-800">Activités du cabinet</a>
+                <a href="honoraires.html" class="block py-2 px-2 text-base hover:bg-blue-800">Honoraires</a>
+                <a href="dossiers.html" class="block py-2 px-2 text-base hover:bg-blue-800">Exemples de dossiers</a>
+                <a href="publications.html" class="block py-2 px-2 text-base hover:bg-blue-800">Publications</a>
+                <a href="faq.html" class="block py-2 px-2 text-base hover:bg-blue-800">FAQ</a>
+                <a href="contact.html" class="block py-2 px-2 text-base hover:bg-blue-800">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+
+
+
+
+    <!-- Hero Section -->
+    <section class="hero-image text-white py-32">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6" data-aos="fade-up">Exemples de dossiers traités</h1>
+        </div>
+    </section>
+
+
+
+
+
+ <!-- Table of Contents -->
+    <aside class="bg-white shadow-sm sticky top-20 z-40 py-4">
+        <div class="container mx-auto px-6">
+            <div class="flex overflow-x-auto space-x-6 hide-scrollbar">
+                <a href="#fiscalite-particuliers" class="whitespace-nowrap px-4 py-2 bg-gray-100 text-gray-700 rounded-full font-medium hover:bg-gray-200">Fiscalité des particuliers</a>
+                <a href="#fiscalite-entreprises" class="whitespace-nowrap px-4 py-2 bg-gray-100 text-gray-700 rounded-full font-medium hover:bg-gray-200">Fiscalité des entreprises</a>
+                <a href="#fiscalite-internationale" class="whitespace-nowrap px-4 py-2 bg-gray-100 text-gray-700 rounded-full font-medium hover:bg-gray-200">Fiscalité internationale</a>
+                <a href="#prestations-juridiques" class="whitespace-nowrap px-4 py-2 bg-gray-100 text-gray-700 rounded-full font-medium hover:bg-gray-200">Prestations juridiques</a>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-12">
+        <!-- Fiscalité des particuliers -->
+        <section id="fiscalite-particuliers" class="section-title mb-16 scroll-mt-52">
+            <div class="flex justify-between items-center mb-8">
+                 <h2 class="text-3xl font-bold text-blue-900 mb-6">Fiscalité des particuliers</h2>
+                <a href="#" class="back-to-top flex items-center text-blue-600">
+                    <span>Retour à la table des matières</span>
+                    <i data-feather="arrow-up" class="ml-2"></i>
+                </a>
+            </div>
+            
+            <div class="bg-white rounded-lg shadow-md p-6 mb-8">
+                <ul class="space-y-4 list-disc pl-6 text-gray-700">
+                    <li>Contestation pour le contribuable des redressements effectués par l'administration qui remettait en cause les valeurs déclarées dans une déclaration ISF</li>
+                    <li>Contestation dans le cadre d'un divorce de la déductibilité des sommes versées (pensions, prestations compensatoires...)</li>
+                    <li>Calcul des conséquences fiscales d'un divorce et optimisation de la convention</li>
+                    <li>Assistance et contestation de l'imposition de sommes que l'administration considérait comme revenus occultes imposables</li>
+                    <li>Contestation de l'imposition d'une plus value immobilière (calcul de délais, preuve de la validité des déductions...)</li>
+                    <li>Optimisation des déclarations, dans le cadre de revenus de sources variées l'année d'un mariage</li>
+                    <li>Contestation de la remise en cause par l'administration de l'exonération de rémunérations versées par des organisations internationales à des interprètes</li>
+                    <li>Contestation de la remise en cause de la déduction de frais de construction et de ravalement</li>
+                    <li>Assistance à déclarations de revenus (ISF, IR, Revenus fonciers, Revenus de capitaux mobiliers...)</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Fiscalité des entreprises et dirigeants -->
+        <section id="fiscalite-entreprises" class="section-title mb-16 scroll-mt-52">
+            <div class="flex justify-between items-center mb-8">
+                <h2 class="text-3xl font-bold text-blue-900 mb-6">Fiscalité des entreprises et dirigeants</h2>
+                <a href="#" class="back-to-top flex items-center text-blue-600">
+                    <span>Retour à la table des matières</span>
+                    <i data-feather="arrow-up" class="ml-2"></i>
+                </a>
+            </div>
+            
+            <div class="bg-white rounded-lg shadow-md p-6 mb-8">
+                <ul class="space-y-4 list-disc pl-6 text-gray-700">
+                    <li>Contestation de la remise en cause de la déductibilité de charges par une entreprise</li>
+                    <li>Optimisation de la rémunération versée à un dirigeant d'entreprise</li>
+                    <li>Contestation de la remise en cause par l'administration du bien fondé d'une provision</li>
+                    <li>Contestation de la remise en cause par l'administration de la durée d'amortissement d'une immobilisation</li>
+                    <li>Contestation de la remise en cause par l'administration du choix de comptabiliser un bien en charge et de ne pas l'immobiliser</li>
+                    <li>Etude juridique, fiscale et sociale de l'intérêt d'un passage en SEL pour des chirurgiens dentistes et d'autres professionnels de la santé</li>
+                    <li>Récupération de crédit de TVA pour des entreprises étrangères</li>
+                    <li>Etude pour un chef d'entreprise de l'intérêt pour lui d'exercer ou non son activité en société, compte tenu des contraintes, juridiques, fiscales et sociales</li>
+                    <li>Assistance d'un contribuable domicilié à l'étranger qui a fait l'objet d'un ESFP, par lequel l'administration essayait de remettre en cause sa domiciliation à l'étranger, et souhaitait l'imposer en conséquence. Après un audit complet de sa situation, les explications et démonstrations fournies à l'administration ont permis d'éviter que sa résidence fiscale ne soit remise en cause.</li>
+                    <li>Contestation de redressements fondés sur l'anormalité des dépenses engagées par son dirigeant, et la remise en cause d'avantages en nature</li>
+                    <li>Contestation de redressements portant sur de la TVA, et du profit sur le trésor corrélatif</li>
+                    <li>Contestation de la remise en cause par l'administration des exonérations fiscales prévues en cas d'installation en zone franche</li>
+                    <li>Contestation de la solidarité fiscale d'un dirigeant dans un dossier de fraude fiscale</li>
+                    <li>Contestation de l'imposition de sommes et d'avantages en nature considérés comme « revenus réputés distribués » à un associé de société</li>
+                    <li>Contestation de l'appréhension et de l'imposition de sommes laissées en compte courant par un chef d'entreprise dons la société connaissait des difficultés</li>
+                    <li>Contestation de la remise en cause par l'administration de la réalité des prestations effectuées par un intermédiaire et de la validité d'une commission versée par une entreprise</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Fiscalité internationale -->
+        <section id="fiscalite-internationale" class="section-title mb-16 scroll-mt-52">
+            <div class="flex justify-between items-center mb-8">
+                <h2 class="text-3xl font-bold text-blue-900 mb-6">Fiscalité internationale</h2>
+                <a href="#" class="back-to-top flex items-center text-blue-600">
+                    <span>Retour à la table des matières</span>
+                    <i data-feather="arrow-up" class="ml-2"></i>
+                </a>
+            </div>
+            
+            <div class="bg-white rounded-lg shadow-md p-6 mb-8">
+                <ul class="space-y-4 list-disc pl-6 text-gray-700">
+                    <li>Contestation de la remise en cause par l'administration de la domiciliation fiscale d'un contribuable</li>
+                    <li>Contestation de l'applicabilité d'une retenue à la source dans le cadre de prestations effectuées par des entreprises établies dans des pays différents</li>
+                    <li>Optimisation des modalités de versements à un résident fiscal français des rémunérations en provenance de l'étranger</li>
+                    <li>Optimisation des modalités de versements des sommes dans un groupe</li>
+                    <li>Assistance à transfert de domicile à l'étranger</li>
+                    <li>Déclarations fiscales pour des artistes et sportifs étrangers lors de prestations effectuées en France</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Prestations juridiques -->
+        <section id="prestations-juridiques" class="section-title mb-16 scroll-mt-52">
+            <div class="flex justify-between items-center mb-8">
+                <h2 class="text-3xl font-bold text-blue-900 mb-6">Prestations juridiques</h2>
+                <a href="#" class="back-to-top flex items-center text-blue-600">
+                    <span>Retour à la table des matières</span>
+                    <i data-feather="arrow-up" class="ml-2"></i>
+                </a>
+            </div>
+            
+            <div class="bg-white rounded-lg shadow-md p-6">
+                <ul class="space-y-4 list-disc pl-6 text-gray-700">
+                    <li>Créations de sociétés (choix de la forme juridique et rédaction des statuts)</li>
+                    <li>Secrétariat juridique (Assemblée générale, augmentation et réduction de capital, changement de dirigeant, transfert de siège social, émission de parts nouvelles...)</li>
+                    <li>Rédaction d'actes de cessions de parts sociales et des garanties d'actif et de passif associées dans le cadre de transmissions d'entreprises</li>
+                    <li>Restructuration patrimoniale</li>
+                    <li>Rédaction de pactes d'associés</li>
+                    <li>Rédaction de contrats de cession de fonds de commerce</li>
+                    <li>Rédactions de contrats de prêts entre sociétés</li>
+                    <li>Rédaction de contrats de caution</li>
+                    <li>Rédaction de contrats de distribution</li>
+                    <li>Rédaction de contrats de coopération entre entreprises</li>
+                    <li>Rédaction de contrats de confidentialité</li>
+                    <li>Rédaction de contrats de licence (marques, usage de nom, image, ...)</li>
+                    <li>Rédaction de contrats de prestations de services</li>
+                    <li>Rédaction de contrats de travail</li>
+                    <li>Rédaction de contrats de « Management fees »</li>
+                    <li>Rédaction de contrats de vente de spectacle</li>
+                    <li>Rédaction d'une cession de bail commercial</li>
+                </ul>
+                
+                <div class="mt-8 p-6 bg-blue-50 rounded-lg">
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Contentieux civil et commercial lié à la responsabilité contractuelle et délictuelle.</h3>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold text-blue-900 mb-6" data-aos="fade-up">Vous avez une question juridique ?</h2>
+            <p class="text-xl text-gray-700 mb-8 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+                Mon cabinet est à votre disposition pour répondre à vos interrogations et vous accompagner dans vos
+                projets.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4" data-aos="fade-up" data-aos-delay="200">
+                <a href="contact.html"
+                    class="bg-blue-900 hover:bg-blue-800 text-white font-bold py-3 px-8 rounded transition duration-300 inline-flex items-center justify-center">
+                    Prendre rendez-vous <i data-feather="calendar" class="ml-2"></i>
+                </a>
+                <a href="faq.html"
+                    class="bg-transparent border-2 border-blue-900 text-blue-900 hover:bg-blue-900 hover:text-white font-bold py-3 px-8 rounded transition duration-300 inline-flex items-center justify-center">
+                    Consulter la FAQ <i data-feather="help-circle" class="ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold gold-text mb-4">Cabinet Stéphane Haddad</h3>
+                    <p class="mb-4">
+                        Cabinet d'avocat spécialisé en droit fiscal et droit des affaires à Paris.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i data-feather="linkedin"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i data-feather="twitter"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold gold-text mb-4">Navigation</h3>
+                    <ul class="space-y-2">
+                        <li><a href="activites.html" class="hover:text-gray-300">Activités du cabinet</a></li>
+                        <li><a href="honoraires.html" class="hover:text-gray-300">Honoraires</a></li>
+                        <li><a href="dossiers.html" class="hover:text-gray-300">Exemples de dossiers</a></li>
+                        <li><a href="publications.html" class="hover:text-gray-300">Publications</a></li>
+                        <li><a href="faq.html" class="hover:text-gray-300">FAQ</a></li>
+                        <li><a href="contact.html" class="hover:text-gray-300">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold gold-text mb-4">Contact</h3>
+                    <address class="not-italic">
+                        <p class="mb-2"><i data-feather="map-pin" class="inline mr-2"></i> 3 Av. Saint-Honoré d'Eylau,
+                            75116 Paris</p>
+                        <p class="mb-2"><i data-feather="phone" class="inline mr-2"></i> +33 1 56 79 00 20</p>
+                        <p class="mb-2"><i data-feather="mail" class="inline mr-2"></i> contact@cabinet-haddad.com</p>
+                    </address>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 Cabinet Stéphane Haddad. Tous droits réservés.</p>
+                <p class="mt-2"><a href="mentions-legales.html" class="hover:text-gray-300">Mentions légales</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function () {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        feather.replace();
+    </script>
+</body>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const dropdown = document.querySelector('.cabinet-dropdown');
+        const checkbox = document.getElementById('dropdown-cabinet');
+
+        if (dropdown && checkbox) {
+            document.addEventListener('click', (e) => {
+                // Si on clique en dehors du dropdown -> fermer
+                if (!dropdown.contains(e.target)) {
+                    checkbox.checked = false;
+                }
+            });
+        }
+    });
+</script>
+
+</html>
