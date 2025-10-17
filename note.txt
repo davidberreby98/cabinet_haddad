@@ -1,4 +1,6 @@
-mettre lien linkedin, enlever twitter
+OK    mettre lien linkedin, enlever twitter
+
+OK hero section que page d'accueil
 
 police verdana partout
 
@@ -8,9 +10,7 @@ laisser sous titre
 
 bandeau deroulant page d'accueil 
 
-icone domaunes dexpertise : meme taille mais centré au milieu
 
-hero section que page d'accueil
 
 pour photo activité, prendre photo faq ancien site
 
