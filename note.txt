@@ -1,30 +1,36 @@
-OK    mettre lien linkedin, enlever twitter
+OK   mettre lien linkedin, enlever twitter
 
 OK hero section que page d'accueil
 
-police verdana partout
+OK police verdana partout
 
-fond greyge au lieu de blanc (meme fond qu'ancien site)
+OK fond greyge au lieu de blanc (meme fond qu'ancien site)
 
-laisser sous titre
+OK ? laisser sous titre
+
+OK honoraire deontologie = image "se defendre devant la juridiction ...."
+
+OK page publication image ordi loupe 
+
+OK faq 2eme question : image impots billets 50
+
+OK faq question quels sont les delais pour saisir tribunaux : mettre image tribunal vide
+
+OK faq question a quoi sert un avocart fiscaliste ou est sa valeur : image bloc-02.jpg
+
+OK faq question a partir de quel montant avocat fiscaliste image droit fiscal 01 (cb)
 
 bandeau deroulant page d'accueil 
 
-
-
 pour photo activité, prendre photo faq ancien site
-
-honoraire deontologie = image "se defendre devant la juridiction ...."
-
-page publication image ordi loupe 
 
 faq premiere question : image controle fiscal ancien site
 
-faq 2eme question : image impots billets 50
 
-faq question quels sont les delais pour saisir tribunaux : mettre image tribunal vide
 
-faq question a quoi sert un avocart fiscaliste ou est sa valeur : image bloc-02.jpg
 
-faq question a partir de quel montant avocat fiscaliste image droit fiscal 01 (cb)
+
+
+
+
 

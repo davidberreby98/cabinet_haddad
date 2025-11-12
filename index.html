@@ -30,6 +30,10 @@
         .gold-border {
             border-color: #D4AF37;
         }
+
+        * {
+            font-family: Verdana, Geneva, sans-serif;
+        }
     </style>
 </head>
 
@@ -39,7 +43,7 @@
         <div class="container mx-auto px-4 py-6">
             <div class="flex justify-between items-center mr-12">
                 <!-- Logo / Nom -->
-                <a href="index.html" class="text-lg md:text-xl lg:text-2xl font-bold gold-text">Cabinet Stéphane
+                <a href="index.html" class="text-lg md:text-xl lg:text-2xl font-bold ">Cabinet Stéphane
                     Haddad</a>
 
 
@@ -101,24 +105,117 @@
 
 
 
+<!-- Slider horizontal responsive -->
+<section class="relative w-full overflow-hidden">
+  <div id="slider-track" class="flex transition-transform duration-700 ease-in-out">
+    <!-- Slide 1 -->
+    <div class="flex-shrink-0 w-full h-96 md:h-[500px] relative">
+      <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+           alt="Image 1" class="w-full h-full object-cover">
+      <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center px-4 md:px-16">
+        <h1 class="text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center">
+          Bienvenue au Cabinet Haddad
+        </h1>
+      </div>
+    </div>
 
-    <!-- Hero Section -->
-    <section class="hero-image text-white py-32">
-        <div class="container mx-auto px-4 text-center">
-            <!-- <h1 class="text-4xl md:text-5xl font-bold mb-6" data-aos="fade-up">Maître Stéphane Haddad</h1> -->
-            <!-- <p class="text-xl md:text-2xl mb-8 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">
-                    Avocat spécialisé en droit fiscal et droit des affaires
-                </p> -->
-            <!-- <a href="contact.html"
-                    class="bg-transparent border-2 border-white hover:bg-white hover:text-blue-900 text-white font-bold py-3 px-8 rounded transition duration-300 inline-flex items-center"
-                    data-aos="fade-up" data-aos-delay="200">
-                    Prendre contact <i data-feather="arrow-right" class="ml-2"></i>
-                </a> -->
-        </div>
-    </section>
+    <!-- Slide 2 -->
+    <div class="flex-shrink-0 w-full h-96 md:h-[500px] relative">
+      <img src="https://images.unsplash.com/photo-1581091012184-72b529a5fc6f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+           alt="Image 2" class="w-full h-full object-cover">
+      <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center px-4 md:px-16">
+        <h1 class="text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center">
+          Avocat en droit fiscal & des affaires
+        </h1>
+      </div>
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="flex-shrink-0 w-full h-96 md:h-[500px] relative">
+      <img src="https://images.unsplash.com/photo-1600585154340-be6161b89c5d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+           alt="Image 3" class="w-full h-full object-cover">
+      <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center px-4 md:px-16">
+        <h1 class="text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center">
+          Votre partenaire juridique de confiance
+        </h1>
+      </div>
+    </div>
+
+    <!-- Slide dupliquée pour boucle fluide -->
+    <div class="flex-shrink-0 w-full h-96 md:h-[500px] relative">
+      <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+           alt="Image 1" class="w-full h-full object-cover">
+      <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center px-4 md:px-16">
+        <h1 class="text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center">
+          Bienvenue au Cabinet Haddad
+        </h1>
+      </div>
+    </div>
+  </div>
+
+  <!-- Flèches navigation -->
+  <button id="prev" class="absolute left-4 top-1/2 transform -translate-y-1/2 text-white bg-black bg-opacity-30 hover:bg-opacity-60 rounded-full p-2 z-20">
+    <i data-feather="chevron-left"></i>
+  </button>
+  <button id="next" class="absolute right-4 top-1/2 transform -translate-y-1/2 text-white bg-black bg-opacity-30 hover:bg-opacity-60 rounded-full p-2 z-20">
+    <i data-feather="chevron-right"></i>
+  </button>
+</section>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  feather.replace();
+
+  const track = document.getElementById('slider-track');
+  const slides = track.children;
+  const totalSlides = slides.length;
+  let currentIndex = 0;
+
+  function updateSlide(transition = true) {
+    track.style.transition = transition ? 'transform 0.7s ease-in-out' : 'none';
+    track.style.transform = `translateX(-${currentIndex * 100}%)`;
+  }
+
+  function nextSlide() {
+    currentIndex++;
+    updateSlide();
+
+    if (currentIndex === totalSlides - 1) {
+      // Retour instantané à la première slide après transition
+      setTimeout(() => {
+        currentIndex = 0;
+        updateSlide(false);
+      }, 700);
+    }
+  }
+
+  function prevSlide() {
+    if (currentIndex === 0) {
+      currentIndex = totalSlides - 2;
+      updateSlide(false);
+      setTimeout(() => {
+        currentIndex--;
+        updateSlide();
+      }, 10);
+    } else {
+      currentIndex--;
+      updateSlide();
+    }
+  }
+
+  document.getElementById('next').addEventListener('click', nextSlide);
+  document.getElementById('prev').addEventListener('click', prevSlide);
+
+  // Auto-slide toutes les 5 secondes
+  setInterval(nextSlide, 5000);
+});
+</script>
+
+
+    
 
     <!-- About Section -->
-    <section class="py-16 bg-white">
+    <section class="py-16 bg-[#F1E7BC]">
         <div class="container mx-auto px-4">
             <div class="flex flex-col md:flex-row items-center">
                 <div class="md:w-1/2 mb-8 md:mb-0 md:pr-16" data-aos="fade-right">
@@ -155,7 +252,7 @@
     </section>
 
     <!-- Expertise Section -->
-    <section class="py-16 bg-gray-100">
+    <section class="py-16  bg-[#F1E7BC]">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl font-bold text-center text-blue-900 mb-12" data-aos="fade-up">Domaines d'expertise</h2>
             <div class="grid grid-cols-1 md:grid-cols-2  gap-8">
@@ -185,7 +282,7 @@
     </section>
 
     <!-- CTA Section -->
-    <section class="py-16 bg-gray-100">
+    <section class="py-16 bg-[#F1E7BC]">
         <div class="container mx-auto px-4 text-center">
             <h2 class="text-3xl font-bold text-blue-900 mb-6" data-aos="fade-up">Vous avez une question juridique ?</h2>
             <p class="text-xl text-gray-700 mb-8 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">
@@ -215,7 +312,8 @@
                         Cabinet d'avocat spécialisé en droit fiscal et droit des affaires à Paris.
                     </p>
                     <div class="flex space-x-4">
-                        <a href="https://www.linkedin.com/in/stephanehaddad/" target="_blank" class="text-gray-400 hover:text-white">
+                        <a href="https://www.linkedin.com/in/stephanehaddad/" target="_blank"
+                            class="text-gray-400 hover:text-white">
                             <i data-feather="linkedin"></i>
                         </a>
                     </div>

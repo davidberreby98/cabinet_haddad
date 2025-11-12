@@ -55,6 +55,10 @@
         .gold-border {
             border-color: #D4AF37;
         }
+
+        * {
+            font-family: Verdana, Geneva, sans-serif;
+        }
     </style>
 </head>
 
@@ -64,7 +68,7 @@
         <div class="container mx-auto px-4 py-6">
             <div class="flex justify-between items-center mr-12">
                 <!-- Logo / Nom -->
-                <a href="index.html" class="text-lg md:text-xl lg:text-2xl font-bold gold-text">Cabinet Stéphane
+                <a href="index.html" class="text-lg md:text-xl lg:text-2xl font-bold">Cabinet Stéphane
                     Haddad</a>
 
 
@@ -128,7 +132,7 @@
 
 
     <!-- FAQ Section -->
-    <section class="py-16 bg-white">
+    <section class="py-16  bg-[#F1E7BC]">
         <div class="container mx-auto px-4 max-w-4xl">
             <h2 class="text-3xl font-bold text-center text-blue-900 mb-12" data-aos="fade-up">Questions fréquentes</h2>
 
@@ -275,6 +279,7 @@
                     </div>
                 </div>
 
+
                 <div class="accordion-item" data-aos="fade-up" data-aos-delay="400">
                     <div class="accordion-header flex justify-between items-center">
                         <h3 class="text-xl font-semibold text-blue-900">
@@ -282,80 +287,96 @@
                         </h3>
                         <i data-feather="chevron-down" class="accordion-icon text-blue-900"></i>
                     </div>
-                    <div class="accordion-content">
-                        <p class="text-gray-700">
-                            L’administration définit l’examen de situation fiscale personnelle comme l’ensemble des
-                            opérations
-                            ayant pour but de vérifier la sincérité des déclarations du revenu global au titre de
-                            l’impôt sur le revenu.
-                            Il consiste à contrôler la cohérence entre :
-                        </p>
-                        <ul class="list-disc pl-5 mt-2 space-y-2 text-gray-700">
-                            <li>les revenus déclarés</li>
-                            <li>et la situation patrimoniale, la situation de trésorerie et les éléments de train de vie
-                                des membres
-                                du foyer fiscal.</li>
-                        </ul>
-                        <p class="text-gray-700 mt-3">
-                            Dans un premier temps, le vérificateur examine le dossier du contribuable (contrôle sur
-                            pièce) et
-                            procède à des recherches extérieures auprès de certains organismes ou établissements en
-                            utilisant son
-                            droit de communication (par exemple en obtenant auprès des banques les relevés bancaires du
-                            contribuable).
-                        </p>
-                        <p class="text-gray-700 mt-2">
-                            Ensuite, le vérificateur se met en rapport avec le contribuable pour obtenir de lui des
-                            documents ou des
-                            compléments d’information, examiner les renseignements obtenus et lui demander,
-                            éventuellement, de
-                            justifier certaines opérations.
-                        </p>
-                        <p class="text-gray-700 mt-2">
-                            Les demandes d’éclaircissements ou de justifications sont susceptibles d’entraîner la
-                            taxation d’office
-                            du contribuable lorsqu’il n’y répond pas ou répond de façon insuffisante.
-                        </p>
 
-                        <h4 class="mt-4 font-semibold text-blue-900">Garanties du contribuable</h4>
-                        <ol class="list-decimal pl-5 mt-2 space-y-2 text-gray-700">
-                            <li>
-                                Le contribuable doit recevoir un avis l’informant qu’il va faire l’objet d’un ESFP
-                                (<em>art. L 47 du LPF</em>).
-                            </li>
-                            <li>
-                                Le contribuable doit pouvoir disposer d’un délai suffisant pour se faire assister d’un
-                                conseil entre
-                                la réception de l’avis de vérification et le début du contrôle.
-                            </li>
-                            <li>
-                                Sauf prorogation ou délai spécial, l’ESFP ne peut s’étendre sur une période supérieure à
-                                un an à
-                                compter de l’avis de vérification. Cette durée est portée à deux ans en cas de
-                                découverte, en cours de
-                                contrôle, d’une activité occulte ou lorsque la procédure de communication par l’autorité
-                                judiciaire de
-                                renseignements à l’administration fiscale a été mise en œuvre dans le délai initial d’un
-                                an
-                                (<em>art. L 12 du LPF</em>).
-                            </li>
-                            <li>
-                                L’administration doit porter à la connaissance du contribuable les résultats de l’ESFP
-                                même en
-                                l’absence de rectification (<em>art. L 49 du LPF</em>).
-                            </li>
-                            <li>
-                                Lorsque l’administration a procédé à un examen contradictoire de situation fiscale
-                                personnelle d’un
-                                contribuable au regard de l’impôt sur le revenu, elle ne peut plus procéder à des
-                                rectifications pour
-                                la même période et pour le même impôt, à moins que le contribuable soit de mauvaise foi
-                                ou ne lui ait
-                                fourni des éléments incomplets ou inexacts (<em>art. L 50 du LPF</em>).
-                            </li>
-                        </ol>
+                    <div class="accordion-content mt-4 space-y-6">
+                        <!-- Texte + Image côte à côte / responsive -->
+                        <div class="flex flex-col-reverse md:flex-row gap-6 items-start">
+                            <!-- Texte à gauche -->
+                            <div class="flex-1 text-gray-700">
+                                <p>
+                                    L’administration définit l’examen de situation fiscale personnelle comme l’ensemble
+                                    des
+                                    opérations ayant pour but de vérifier la sincérité des déclarations du revenu global
+                                    au titre de
+                                    l’impôt sur le revenu. Il consiste à contrôler la cohérence entre :
+                                </p>
+                                <br>
+                                <ul class="list-disc pl-5 mt-2 space-y-2">
+                                    <li>les revenus déclarés</li>
+                                    <li>et la situation patrimoniale, la situation de trésorerie et les éléments de
+                                        train de vie des membres du foyer fiscal.</li>
+                                </ul>
+                            </div>
+
+                            <!-- Image à droite sur desktop, sous le texte sur mobile -->
+                            <div class="w-full md:w-1/2 flex-shrink-0" data-aos="fade-left">
+                                <img src="images_cabinet_haddad/istockphoto-2150649751-1024x1024.jpg"
+                                    alt="Examen de situation fiscale personnelle"
+                                    class="rounded-lg shadow-lg object-cover w-full h-auto">
+                            </div>
+                        </div>
+
+                        <!-- Texte plein largeur sous l'image -->
+                        <div class="text-gray-700">
+                            <p class="mt-3">
+                                Dans un premier temps, le vérificateur examine le dossier du contribuable (contrôle sur
+                                pièce) et
+                                procède à des recherches extérieures auprès de certains organismes ou établissements en
+                                utilisant son droit de communication (par exemple en obtenant auprès des banques les
+                                relevés bancaires du contribuable).
+                            </p>
+                            <p class="mt-2">
+                                Ensuite, le vérificateur se met en rapport avec le contribuable pour obtenir de lui des
+                                documents ou des
+                                compléments d’information, examiner les renseignements obtenus et lui demander,
+                                éventuellement, de justifier certaines opérations.
+                            </p>
+                            <p class="mt-2">
+                                Les demandes d’éclaircissements ou de justifications sont susceptibles d’entraîner la
+                                taxation d’office du contribuable lorsqu’il n’y répond pas ou répond de façon
+                                insuffisante.
+                            </p>
+                            <h4 class="mt-4 font-semibold text-blue-900">Garanties du contribuable</h4>
+                            <ol class="list-decimal pl-5 mt-2 space-y-2">
+                                <li>
+                                    Le contribuable doit recevoir un avis l’informant qu’il va faire l’objet d’un ESFP
+                                    (<em>art. L 47 du LPF</em>).
+                                </li>
+                                <li>
+                                    Le contribuable doit pouvoir disposer d’un délai suffisant pour se faire assister
+                                    d’un
+                                    conseil entre la réception de l’avis de vérification et le début du contrôle.
+                                </li>
+                                <li>
+                                    Sauf prorogation ou délai spécial, l’ESFP ne peut s’étendre sur une période
+                                    supérieure à
+                                    un an à compter de l’avis de vérification. Cette durée est portée à deux ans en cas
+                                    de
+                                    découverte, en cours de contrôle, d’une activité occulte ou lorsque la procédure de
+                                    communication par l’autorité
+                                    judiciaire de renseignements à l’administration fiscale a été mise en œuvre dans le
+                                    délai initial d’un
+                                    an (<em>art. L 12 du LPF</em>).
+                                </li>
+                                <li>
+                                    L’administration doit porter à la connaissance du contribuable les résultats de
+                                    l’ESFP
+                                    même en l’absence de rectification (<em>art. L 49 du LPF</em>).
+                                </li>
+                                <li>
+                                    Lorsque l’administration a procédé à un examen contradictoire de situation fiscale
+                                    personnelle d’un contribuable au regard de l’impôt sur le revenu, elle ne peut plus
+                                    procéder à des
+                                    rectifications pour la même période et pour le même impôt, à moins que le
+                                    contribuable soit de mauvaise foi
+                                    ou ne lui ait fourni des éléments incomplets ou inexacts (<em>art. L 50 du
+                                        LPF</em>).
+                                </li>
+                            </ol>
+                        </div>
                     </div>
                 </div>
+
 
 
                 <!-- Question : Vérification de comptabilité -->
@@ -390,7 +411,7 @@
                         </ol>
 
                         <div class="overflow-x-auto mt-4">
-                            <table class="table-auto border border-gray-300 text-sm w-full max-w-lg">
+                            <table class="table-auto border border-gray-300 text-sm w-full max-w-lg bg-white">
                                 <thead class="bg-gray-100">
                                     <tr>
                                         <th class="px-4 py-2 border border-gray-300 text-left">Type d’activité</th>
@@ -423,6 +444,8 @@
                         </div>
                     </div>
                 </div>
+
+
 
                 <!-- Question : Contrôle sur pièce -->
                 <div class="accordion-item" data-aos="fade-up" data-aos-delay="150">
@@ -903,8 +926,8 @@
                             <!-- Liste complète comme dans ton texte original -->
                         </ul>
 
-                        <p class="text-gray-700 font-bold mb-1">Garanties du contribuable :</p>
-                        <ul class="list-disc list-inside">
+                        <p class="mt-4 font-semibold text-blue-900">Garanties du contribuable </p>
+                        <ul class="list-disc list-inside text-gray-700">
                             <li>L’administration ne peut utiliser les renseignements recueillis auprès des tiers qu’à la
                                 condition que le contribuable en soit informé et soit mis à même de les contester.</li>
                             <li>En cas de contestation ultérieure des impositions devant le juge, l’administration doit
@@ -914,28 +937,51 @@
                     </div>
                 </div>
 
-                <!-- Q : Délai pour saisir les tribunaux -->
-                <div class="accordion-item" data-aos="fade-up" data-aos-delay="550">
+
+
+                <div class="accordion-item" data-aos="fade-up" data-aos-delay="400">
                     <div class="accordion-header flex justify-between items-center">
                         <h3 class="text-xl font-semibold text-blue-900">
                             Quel est le délai pour saisir les tribunaux ?
                         </h3>
                         <i data-feather="chevron-down" class="accordion-icon text-blue-900"></i>
                     </div>
-                    <div class="accordion-content mt-4">
-                        <p class="text-gray-700 mb-2">
-                            Le délai pour saisir le Tribunal Administratif ou le Tribunal de Grande Instance est de deux
-                            mois à
-                            compter de la réception de la décision de l’administration sur le recours contentieux
-                            préalable.
-                        </p>
-                        <p class="text-gray-700">
-                            Un défaut de réponse de plus de six mois à la suite d’une réclamation contentieuse équivaut
-                            à un rejet
-                            implicite et permet alors de saisir les tribunaux.
-                        </p>
+
+                    <div class="accordion-content mt-4 space-y-6">
+                        <!-- Texte + Image côte à côte / responsive -->
+                        <div class="flex flex-col-reverse md:flex-row gap-6 items-start">
+                            <!-- Texte à gauche -->
+                            <div class="flex-1 text-gray-700">
+                                <p class="text-gray-700 mb-2">
+                                    Le délai pour saisir le Tribunal Administratif ou le Tribunal de Grande Instance est
+                                    de deux
+                                    mois à
+                                    compter de la réception de la décision de l’administration sur le recours
+                                    contentieux
+                                    préalable.
+                                </p>
+                                <p class="text-gray-700">
+                                    Un défaut de réponse de plus de six mois à la suite d’une réclamation contentieuse
+                                    équivaut
+                                    à un rejet
+                                    implicite et permet alors de saisir les tribunaux.
+                                </p>
+
+                            </div>
+
+                            <!-- Image à droite sur desktop, sous le texte sur mobile -->
+                            <div class="w-full md:w-1/2 flex-shrink-0" data-aos="fade-left">
+                                <img src="images_cabinet_haddad/dsc_0463.webp"
+                                    alt="Examen de situation fiscale personnelle"
+                                    class="rounded-lg shadow-lg object-cover w-full h-auto">
+                            </div>
+                        </div>
+
+
                     </div>
                 </div>
+
+
 
 
 
@@ -947,43 +993,64 @@
                         </h3>
                         <i data-feather="chevron-down" class="accordion-icon text-blue-900"></i>
                     </div>
-                    <div class="accordion-content mt-4">
+                    <div class="accordion-content mt-4 space-y-6">
+                        <div class="flex flex-col-reverse md:flex-row gap-6 items-start">
+                            <div class="flex-1 text-gray-700">
+                                <p class="text-gray-700 mb-2">
+                                    La relation qu’entretient un contribuable avec l’administration est par nature
+                                    déséquilibrée
+                                    puisque
+                                    l’administration est composée de professionnels de la fiscalité qui maîtrisent un
+                                    droit
+                                    et
+                                    des procédures
+                                    très complexes, dont le contribuable est souvent ignorant.
+                                </p>
+                                <p class="text-gray-700 mb-2">
+                                    Par ailleurs, toutes opérations engendrant un coût, celles-ci ne peuvent pas être
+                                    réduites à
+                                    leurs aspects
+                                    juridiques ou économiques sans tenir compte de leurs incidences financières et
+                                    fiscales.
+                                </p>
+                            </div>
+                            <div class="w-full md:w-1/2 flex-shrink-0" data-aos="fade-left">
+                                <img src="images_cabinet_haddad/bloc-02.jpg"
+                                    alt="Examen de situation fiscale personnelle"
+                                    class="rounded-lg shadow-lg object-cover w-full h-auto">
+                            </div>
+                        </div>
                         <p class="text-gray-700 mb-2">
-                            La relation qu’entretient un contribuable avec l’administration est par nature déséquilibrée
-                            puisque
-                            l’administration est composée de professionnels de la fiscalité qui maîtrisent un droit et
-                            des procédures
-                            très complexes, dont le contribuable est souvent ignorant.
-                        </p>
-                        <p class="text-gray-700 mb-2">
-                            Par ailleurs, toutes opérations engendrant un coût, celles-ci ne peuvent pas être réduites à
-                            leurs aspects
-                            juridiques ou économiques sans tenir compte de leurs incidences financières et fiscales.
-                        </p>
-                        <p class="text-gray-700 mb-2">
-                            Un Avocat Fiscaliste est un professionnel du droit indépendant qui connaît les lois et les
+                            Un Avocat Fiscaliste est un professionnel du droit indépendant qui connaît les lois et
+                            les
                             règles auxquelles
-                            sont tenus de se conformer tant le contribuable que l’administration fiscale, ainsi que le
+                            sont tenus de se conformer tant le contribuable que l’administration fiscale, ainsi que
+                            le
                             fonctionnement des
                             institutions administratives et judiciaires. Il s’appuie sur la Loi, les instructions
                             administratives, une
                             jurisprudence abondante et la connaissance de l’activité de son client pour correspondre
                             avec l’administration
-                            en utilisant une argumentation juridique étayée lorsqu’il existe un désaccord entre celle-ci
+                            en utilisant une argumentation juridique étayée lorsqu’il existe un désaccord entre
+                            celle-ci
                             et le contribuable.
                         </p>
                         <p class="text-gray-700 mb-2">
-                            L’intervention d’un Avocat Fiscaliste permet donc de rééquilibrer la relation qu’entretient
+                            L’intervention d’un Avocat Fiscaliste permet donc de rééquilibrer la relation
+                            qu’entretient
                             le contribuable avec
                             l’administration, et de le soulager d’une partie de son stress et de ses angoisses en
                             permettant à celui-ci
-                            d’utiliser au mieux de ses intérêts les droits et garanties que lui confère la loi pour ne
+                            d’utiliser au mieux de ses intérêts les droits et garanties que lui confère la loi pour
+                            ne
                             payer que le « juste impôt ».
                         </p>
                         <p class="text-gray-700 mb-2">
-                            Dans une démarche proactive, l’Avocat Fiscaliste peut également permettre d’optimiser et de
+                            Dans une démarche proactive, l’Avocat Fiscaliste peut également permettre d’optimiser et
+                            de
                             sécuriser
-                            juridiquement et fiscalement les opérations et transactions des personnes physiques comme
+                            juridiquement et fiscalement les opérations et transactions des personnes physiques
+                            comme
                             des entreprises.
                         </p>
                         <p class="text-gray-700 mb-2">
@@ -995,9 +1062,11 @@
                             meilleures conditions.
                         </p>
                         <p class="text-gray-700 mb-2">
-                            Par sa connaissance de du droit, l’Avocat Fiscaliste participe à l’image de rigueur et de
+                            Par sa connaissance de du droit, l’Avocat Fiscaliste participe à l’image de rigueur et
+                            de
                             force d’une entreprise
-                            et lui permet de développer ses activités et ses relations commerciales en assurant, grâce à
+                            et lui permet de développer ses activités et ses relations commerciales en assurant,
+                            grâce à
                             un travail
                             documenté, la sécurité juridique et fiscale de leurs transactions et opérations avec
                             l’ensemble des acteurs
@@ -1009,48 +1078,71 @@
                             <strong> Avoir recours aux services d’un Avocat Fiscaliste, c’est : </strong>
                         </p>
                         <ul class="list-disc list-inside mt-2 text-gray-700 mb-2">
-                            <li>Procurer aux entreprises un avantage concurrentiel essentiel à la conquête de nouveaux
+                            <li>Procurer aux entreprises un avantage concurrentiel essentiel à la conquête de
+                                nouveaux
                                 marchés</li>
                             <li>Faire appel à un Professionnel Partenaire pour partager tant ses projets que ses
                                 problèmes dans la
-                                confidentialité et la sérénité et trouver des solutions au mieux de ses intérêts</li>
+                                confidentialité et la sérénité et trouver des solutions au mieux de ses intérêts
+                            </li>
                             <li>Se décharger du stress inhérent à la complexité croissante des règles juridiques et
                                 fiscales pour mieux
-                                se consacrer à son métier et à sa famille et éviter des pertes de temps, d’énergie, et
+                                se consacrer à son métier et à sa famille et éviter des pertes de temps, d’énergie,
+                                et
                                 donc d’argent.</li>
                         </ul>
                     </div>
                 </div>
 
-                <!-- Q : Montant intéressant -->
-                <div class="accordion-item" data-aos="fade-up" data-aos-delay="650">
+
+
+                <div class="accordion-item" data-aos="fade-up" data-aos-delay="400">
                     <div class="accordion-header flex justify-between items-center">
                         <h3 class="text-xl font-semibold text-blue-900">
                             A partir de quel montant est il intéressant de consulter un Avocat Fiscaliste ?
                         </h3>
                         <i data-feather="chevron-down" class="accordion-icon text-blue-900"></i>
                     </div>
-                    <div class="accordion-content mt-4">
-                        <p class="text-gray-700 mb-2">
-                            Il n’y a pas de montant précis dés lors qu’il s’agit d’économiser votre argent.
-                        </p>
-                        <p class="text-gray-700 mb-2">
-                            Un premier entretien permet en général de définir juridiquement et fiscalement votre
-                            problème et de
-                            savoir si il convient ou non de vous faire accompagner par un avocat.
-                        </p>
-                        <p class="text-gray-700 mb-2">
-                            En tout état de cause, il est prudent de demander conseil chaque fois que :
-                        </p>
-                        <ul class="list-disc list-inside">
-                            <li>vous faites l’objet d’un controle fiscal</li>
-                            <li>vous envisagez de réaliser une opération pour le compte de votre entreprise (contrat
-                                avec des tiers,
-                                restructuration, cession, hésitation entre deux possibilités...) ou dans le cadre de la
-                                gestion de votre
-                                patrimoine (préparation de votre succession, départ à l’étranger...)</li>
-                            <li>vous considérez vos impôts comme excessifs</li>
-                        </ul>
+
+                    <div class="accordion-content mt-4 space-y-6">
+                        <!-- Texte + Image côte à côte / responsive -->
+                        <div class="flex flex-col-reverse md:flex-row gap-6 items-start">
+                            <!-- Texte à gauche -->
+                            <div class="flex-1 text-gray-700">
+                                <p class="text-gray-700 mb-2">
+                                    Il n’y a pas de montant précis dés lors qu’il s’agit d’économiser votre argent.
+                                </p>
+                                <p class="text-gray-700 mb-2">
+                                    Un premier entretien permet en général de définir juridiquement et fiscalement votre
+                                    problème et de
+                                    savoir si il convient ou non de vous faire accompagner par un avocat.
+                                </p>
+                                <p class="text-gray-700 mb-2">
+                                    En tout état de cause, il est prudent de demander conseil chaque fois que :
+                                </p>
+                                <ul class="list-disc list-inside">
+                                    <li>vous faites l’objet d’un controle fiscal</li>
+                                    <li>vous envisagez de réaliser une opération pour le compte de votre entreprise
+                                        (contrat
+                                        avec des tiers,
+                                        restructuration, cession, hésitation entre deux possibilités...) ou dans le
+                                        cadre de la
+                                        gestion de votre
+                                        patrimoine (préparation de votre succession, départ à l’étranger...)</li>
+                                    <li>vous considérez vos impôts comme excessifs</li>
+                                </ul>
+
+                            </div>
+
+                            <!-- Image à droite sur desktop, sous le texte sur mobile -->
+                            <div class="w-full md:w-1/2 flex-shrink-0" data-aos="fade-left">
+                                <img src="images_cabinet_haddad/droit-fiscal-1.jpg"
+                                    alt="Examen de situation fiscale personnelle"
+                                    class="rounded-lg shadow-lg object-cover w-full h-auto">
+                            </div>
+                        </div>
+
+
                     </div>
                 </div>
 
@@ -1090,7 +1182,7 @@
                             fiscal ?</h3>
                         <i data-feather="chevron-down" class="accordion-icon text-blue-900"></i>
                     </div>
-                    <div class="accordion-content">
+                    <div class="accordion-content text-gray-700">
                         <p class="text-gray-700">
                             Maître Stéphane Haddad dispose d'une solide expérience en contentieux fiscal acquise dans
                             des cabinets internationaux avant de fonder son propre cabinet. Il intervient régulièrement
@@ -1134,7 +1226,8 @@
                         Cabinet d'avocat spécialisé en droit fiscal et droit des affaires à Paris.
                     </p>
                     <div class="flex space-x-4">
-                        <a href="https://www.linkedin.com/in/stephanehaddad/" target="_blank" class="text-gray-400 hover:text-white">
+                        <a href="https://www.linkedin.com/in/stephanehaddad/" target="_blank"
+                            class="text-gray-400 hover:text-white">
                             <i data-feather="linkedin"></i>
                         </a>
                     </div>
