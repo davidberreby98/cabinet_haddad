@@ -5,390 +5,711 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cabinet Stéphane haddad - Avocat en Droit Fiscal et Droit des Affaires</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
-    <script src="https://unpkg.com/feather-icons"></script>
     <style>
-        .hero-image {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
-            background-size: cover;
-            background-position: center;
-        }
-
-        .accordion-content {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease-out;
-        }
-
-        .gold-text {
-            color: #D4AF37;
-        }
-
-        .gold-border {
-            border-color: #D4AF37;
+        :root {
+            /* Comme nav / footer des autres pages */
+            --page-bg: #943a3d;
+            /* Comme bg-[#F1E7BC] sur les autres pages */
+            --cream: #f1e7bc;
+            --forest: #1a472a;
+            --forest-dark: #143620;
+            --text-body: #1a3320;
+            --accent-red: #8b1538;
+            --link: #1a472a;
+            --email-red: #a61c2e;
         }
 
         * {
-            font-family: Verdana, Geneva, sans-serif;
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 14px;
+            line-height: 1.55;
+            color: var(--text-body);
+            background: var(--page-bg);
+            min-height: 100vh;
+        }
+
+        .retro-frame {
+            max-width: 980px;
+            margin: 24px auto 32px;
+            background: var(--cream);
+            /* Pourtour vert entre le fond bordeaux (body) et le contenu */
+            border: 8px solid var(--forest);
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.35);
+            /* Bandeau crème entre la bordure verte et le contenu (navbar, côtés, bas) */
+            padding: 14px;
+        }
+
+        /* Header */
+        .retro-header {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: stretch;
+            background: var(--forest);
+            color: var(--cream);
+            border-bottom: 2px solid rgba(241, 231, 188, 0.35);
+        }
+
+        .retro-brand {
+            background: transparent;
+            color: var(--cream);
+            font-weight: bold;
+            font-size: clamp(1rem, 2.5vw, 1.35rem);
+            padding: 18px 22px;
+            display: flex;
+            align-items: center;
+            flex: 0 0 auto;
+            min-width: 200px;
+        }
+
+        .retro-brand a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .retro-topnav {
+            flex: 1;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 8px 18px;
+            padding: 14px 16px;
+            background: transparent;
+        }
+
+        .retro-topnav a {
+            color: var(--cream);
+            text-decoration: none;
+            font-size: 0.72rem;
+            letter-spacing: 0.04em;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .retro-topnav a:hover {
+            text-decoration: underline;
+            color: #fff;
+        }
+
+        .mobile-toggle {
+            display: none;
+            width: 100%;
+            padding: 10px 16px;
+            background: var(--forest);
+            color: var(--cream);
+            border: none;
+            font-family: inherit;
+            font-weight: bold;
+            cursor: pointer;
+            text-transform: uppercase;
+            font-size: 0.75rem;
+        }
+
+        @media (max-width: 768px) {
+            .retro-header {
+                flex-direction: column;
+            }
+
+            .mobile-toggle {
+                display: block;
+            }
+
+            .retro-topnav {
+                display: none;
+                flex-direction: column;
+                align-items: stretch;
+                padding: 0;
+                width: 100%;
+            }
+
+            .retro-topnav.open {
+                display: flex;
+                padding: 12px 16px;
+            }
+
+            .retro-topnav a {
+                padding: 8px 0;
+                border-bottom: 1px solid rgba(241, 231, 188, 0.2);
+            }
+        }
+
+        /* Slider */
+        .retro-slider-wrap {
+            position: relative;
+            overflow: hidden;
+            border-bottom: 1px solid rgba(26, 71, 42, 0.2);
+        }
+
+        .retro-slider-track {
+            display: flex;
+            transition: transform 0.7s ease-in-out;
+        }
+
+        .retro-slide {
+            flex: 0 0 100%;
+            position: relative;
+            height: min(42vw, 320px);
+            min-height: 200px;
+        }
+
+        .retro-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .retro-slide-caption {
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.35);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 16px;
+        }
+
+        .retro-slide-caption h2 {
+            margin: 0;
+            color: #fff;
+            font-size: clamp(1.1rem, 3.5vw, 1.75rem);
+            font-weight: bold;
+            text-align: center;
+            text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+        }
+
+        .retro-slider-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 2;
+            width: 40px;
+            height: 40px;
+            border: none;
+            border-radius: 50%;
+            background: rgba(0, 0, 0, 0.35);
+            color: #fff;
+            font-size: 22px;
+            line-height: 1;
+            cursor: pointer;
+        }
+
+        .retro-slider-btn:hover {
+            background: rgba(0, 0, 0, 0.55);
+        }
+
+        .retro-slider-btn.prev {
+            left: 10px;
+        }
+
+        .retro-slider-btn.next {
+            right: 10px;
+        }
+
+        /* Two columns */
+        .retro-main-grid {
+            display: grid;
+            grid-template-columns: 240px 1fr;
+            gap: 0;
+            min-height: 200px;
+        }
+
+        @media (max-width: 720px) {
+            .retro-main-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .retro-sidebar {
+            border-right: 1px solid rgba(26, 71, 42, 0.2);
+            padding-bottom: 20px;
+        }
+
+        @media (max-width: 720px) {
+            .retro-sidebar {
+                border-right: none;
+                border-bottom: 1px solid rgba(26, 71, 42, 0.2);
+            }
+        }
+
+        .retro-sidebar-photo-wrap {
+            position: relative;
+            margin: 0;
+        }
+
+        .retro-sidebar-badge {
+            position: absolute;
+            top: 10px;
+            left: 0;
+            background: var(--accent-red);
+            color: #fff;
+            font-size: 0.7rem;
+            font-weight: bold;
+            padding: 6px 14px;
+            text-transform: capitalize;
+            z-index: 1;
+            box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
+        }
+
+        .retro-sidebar-photo-wrap img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .retro-side-nav {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .retro-side-nav li {
+            border-bottom: 1px solid rgba(26, 71, 42, 0.12);
+        }
+
+        .retro-side-nav a {
+            display: block;
+            padding: 10px 14px 10px 12px;
+            color: var(--link);
+            text-decoration: none;
+            font-size: 0.82rem;
+        }
+
+        .retro-side-nav a::before {
+            content: "→ ";
+            color: var(--forest);
+            font-weight: bold;
+        }
+
+        .retro-side-nav a:hover,
+        .retro-side-nav a.current {
+            background: rgba(26, 71, 42, 0.06);
+        }
+
+        .retro-side-nav a.current {
+            font-weight: bold;
+        }
+
+        .retro-content {
+            padding: 22px 26px 32px;
+            text-align: justify;
+        }
+
+        .retro-content h1 {
+            margin: 0 0 16px;
+            font-size: 1rem;
+            text-transform: uppercase;
+            color: var(--forest);
+            letter-spacing: 0.02em;
+        }
+
+        .retro-content h2 {
+            margin: 28px 0 12px;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            color: var(--forest);
+            clear: both;
+        }
+
+        .retro-float-portrait {
+            float: right;
+            max-width: 200px;
+            width: 38%;
+            height: auto;
+            margin: 0 0 12px 18px;
+            border: 1px solid rgba(26, 71, 42, 0.25);
+            box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.12);
+        }
+
+        .retro-content p {
+            margin: 0 0 14px;
+        }
+
+        .retro-contact-block {
+            margin: 18px 0 22px;
+            padding: 12px 0;
+            border-top: 1px solid rgba(26, 71, 42, 0.15);
+            border-bottom: 1px solid rgba(26, 71, 42, 0.15);
+            text-align: left;
+        }
+
+        .retro-contact-block a {
+            color: var(--email-red);
+            font-weight: bold;
+        }
+
+        .retro-expertise {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-top: 8px;
+        }
+
+        @media (max-width: 600px) {
+            .retro-expertise {
+                grid-template-columns: 1fr;
+            }
+
+            .retro-float-portrait {
+                float: none;
+                display: block;
+                width: 100%;
+                max-width: 280px;
+                margin: 0 auto 16px;
+            }
+        }
+
+        .retro-expertise-box {
+            border: 1px solid rgba(26, 71, 42, 0.25);
+            padding: 14px;
+            background: rgba(255, 255, 255, 0.45);
+        }
+
+        .retro-expertise-box h3 {
+            margin: 0 0 8px;
+            font-size: 0.9rem;
+            color: var(--forest);
+        }
+
+        .retro-cta {
+            margin-top: 28px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(26, 71, 42, 0.2);
+            text-align: center;
+        }
+
+        .retro-cta p {
+            text-align: center;
+        }
+
+        .retro-btn-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            justify-content: center;
+            margin-top: 16px;
+        }
+
+        .retro-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            text-decoration: none;
+            text-transform: uppercase;
+            border: 2px solid var(--forest);
+        }
+
+        .retro-btn-primary {
+            background: var(--forest);
+            color: #fff;
+        }
+
+        .retro-btn-primary:hover {
+            background: var(--forest-dark);
+            border-color: var(--forest-dark);
+        }
+
+        .retro-btn-outline {
+            background: transparent;
+            color: var(--forest);
+        }
+
+        .retro-btn-outline:hover {
+            background: var(--forest);
+            color: #fff;
+        }
+
+        .retro-inline-link {
+            color: var(--forest);
+            font-weight: bold;
+        }
+
+        .retro-inline-link:hover {
+            color: var(--accent-red);
+        }
+
+        /* Footer */
+        .retro-footer {
+            background: var(--forest);
+            color: #fff;
+            padding: 20px 24px 0;
+            font-size: 0.8rem;
+        }
+
+        .retro-footer-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding-bottom: 20px;
+        }
+
+        @media (max-width: 640px) {
+            .retro-footer-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .retro-footer h3 {
+            margin: 0 0 10px;
+            font-size: 0.85rem;
+            color: #e8dcc4;
+            text-transform: uppercase;
+        }
+
+        .retro-footer a {
+            color: #e0e8e0;
+        }
+
+        .retro-footer a:hover {
+            color: #fff;
+        }
+
+        .retro-footer ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .retro-footer li {
+            margin-bottom: 6px;
+        }
+
+        .retro-footer-bar {
+            text-align: center;
+            padding: 12px 16px;
+            font-size: 0.72rem;
+            color: rgba(255, 255, 255, 0.85);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+        }
+
+        .retro-footer-bar a {
+            color: rgba(255, 255, 255, 0.9);
         }
     </style>
 </head>
 
-<body class="font-sans bg-gray-50">
+<body>
+    <div class="retro-frame">
+        <header class="retro-header">
+            <div class="retro-brand">
+                <a href="index.html">Cabinet Stéphane Haddad</a>
+            </div>
+            <button type="button" class="mobile-toggle" id="mobile-menu-button" aria-expanded="false"
+                aria-controls="top-nav">Menu</button>
+            <nav class="retro-topnav" id="top-nav">
+                <a href="index.html">→ LE CABINET</a>
+                <a href="activites.html">CONTRÔLE FISCAL</a>
+                <a href="faq.html">FAQ</a>
+                <a href="publications.html">LIENS</a>
+                <a href="contact.html">CONTACT</a>
+            </nav>
+        </header>
 
-    <nav class="bg-[#943a3d] text-white sticky top-0 z-50 shadow-lg">
-        <div class="container mx-auto px-4 py-6">
-            <div class="flex justify-between items-center mr-12">
-                <!-- Logo / Nom -->
-                <a href="index.html" class="text-lg md:text-xl lg:text-2xl font-bold ">Cabinet Stéphane
-                    Haddad</a>
-
-
-                <!-- Menu desktop -->
-                <div class="hidden md:flex space-x-4 lg:space-x-8 xl:space-x-12 2xl:space-x-20">
-
-
-                    <!-- wrapper : assure-toi que c'est inséré à l'endroit de ton menu "Le cabinet" -->
-                    <div class="relative group cabinet-dropdown">
-                        <!-- checkbox cachée si tu veux aussi le clic -->
-                        <input type="checkbox" id="dropdown-cabinet" class="peer hidden">
-
-                        <!-- Bouton (label si checkbox utilisée) -->
-                        <label for="dropdown-cabinet"
-                            class="flex items-center text-base md:text-lg lg:text-xl hover:text-gray-300 cursor-pointer select-none">
-                            Le cabinet <i data-feather="chevron-down" class="ml-1"></i>
-                        </label>
-
-                        <!-- Menu déroulant -->
-                        <div class="absolute left-0 top-full mt-0 w-56 bg-white text-blue-900 rounded-md shadow-lg py-2 z-50
-            opacity-0 invisible 
-            group-hover:opacity-100 group-hover:visible 
-            peer-checked:opacity-100 peer-checked:visible 
-            transition-opacity duration-150 pointer-events-auto">
-                            <a href="activites.html"
-                                class="block px-4 py-2 text-base md:text-lg hover:bg-blue-100">Activités du cabinet</a>
-                            <a href="honoraires.html"
-                                class="block px-4 py-2 text-base md:text-lg hover:bg-blue-100">Honoraires</a>
-                            <a href="dossiers.html"
-                                class="block px-4 py-2 text-base md:text-lg hover:bg-blue-100">Exemples de dossiers</a>
-                        </div>
+        <div class="retro-slider-wrap">
+            <div id="slider-track" class="retro-slider-track">
+                <div class="retro-slide">
+                    <img src="images_cabinet_haddad/tingey-injury-law-firm-DZpc4UY8ZtY-unsplash.jpg" alt="">
+                    <div class="retro-slide-caption">
+                        <h2>Cabinet Stéphane Haddad</h2>
                     </div>
-
-                    <!-- Autres liens -->
-                    <a href="publications.html"
-                        class="text-base md:text-lg lg:text-xl hover:text-gray-300">Publications</a>
-                    <a href="faq.html" class="text-base md:text-lg lg:text-xl hover:text-gray-300">FAQ</a>
-                    <a href="contact.html" class="text-base md:text-lg lg:text-xl hover:text-gray-300">Contact</a>
                 </div>
-
-                <!-- Bouton menu mobile -->
-                <button class="md:hidden focus:outline-none" id="mobile-menu-button">
-                    <i data-feather="menu"></i>
-                </button>
-            </div>
-
-            <!-- Menu mobile -->
-            <div class="md:hidden hidden mt-2" id="mobile-menu">
-                <a href="activites.html" class="block py-2 px-2 text-base hover:bg-blue-800">Activités du cabinet</a>
-                <a href="honoraires.html" class="block py-2 px-2 text-base hover:bg-blue-800">Honoraires</a>
-                <a href="dossiers.html" class="block py-2 px-2 text-base hover:bg-blue-800">Exemples de dossiers</a>
-                <a href="publications.html" class="block py-2 px-2 text-base hover:bg-blue-800">Publications</a>
-                <a href="faq.html" class="block py-2 px-2 text-base hover:bg-blue-800">FAQ</a>
-                <a href="contact.html" class="block py-2 px-2 text-base hover:bg-blue-800">Contact</a>
-            </div>
-        </div>
-    </nav>
-
-
-
-
-<!-- Slider horizontal responsive -->
-<section class="relative w-full overflow-hidden">
-  <div id="slider-track" class="flex transition-transform duration-700 ease-in-out">
-    <!-- Slide 1 -->
-    <div class="flex-shrink-0 w-full h-96 md:h-[500px] relative">
-      <img src="images_cabinet_haddad/tingey-injury-law-firm-DZpc4UY8ZtY-unsplash.jpg"
-           alt="Image 1" class="w-full h-full object-cover">
-      <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center px-4 md:px-16">
-        <h1 class="text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center">
-        Cabinet Stéphane Haddad
-        </h1>
-      </div>
-    </div>
-
-    <!-- Slide 2 -->
-    <div class="flex-shrink-0 w-full h-96 md:h-[500px] relative">
-      <img src="images_cabinet_haddad/corentin-J5TYAxwQoM8-unsplash.jpg"
-           alt="Image 2" class="w-full h-full object-cover">
-      <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center px-4 md:px-16">
-        <h1 class="text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center">
-          Avocat en droit fiscal & droit des affaires
-        </h1>
-      </div>
-    </div>
-
-        <!-- Slide 1 -->
-    <div class="flex-shrink-0 w-full h-96 md:h-[500px] relative">
-      <img src="images_cabinet_haddad/tingey-injury-law-firm-DZpc4UY8ZtY-unsplash.jpg"
-           alt="Image 1" class="w-full h-full object-cover">
-      <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center px-4 md:px-16">
-        <!-- <h1 class="text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center">
-        Cabinet Stéphane Haddad
-        </h1> -->
-      </div>
-    </div>
-
-    <!-- Slide 2 -->
-    <div class="flex-shrink-0 w-full h-96 md:h-[500px] relative">
-      <img src="images_cabinet_haddad/corentin-J5TYAxwQoM8-unsplash.jpg"
-           alt="Image 2" class="w-full h-full object-cover">
-      <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center px-4 md:px-16">
-        <h1 class="text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center">
-          <!-- Avocat en droit fiscal & droit des affaires
-        </h1> -->
-      </div>
-    </div>
-
-
-    <!-- Slide dupliquée pour boucle fluide -->
-    <div class="flex-shrink-0 w-full h-96 md:h-[500px] relative">
-              <img src="images_cabinet_haddad/tingey-injury-law-firm-DZpc4UY8ZtY-unsplash.jpg"
-           alt="Image 1" class="w-full h-full object-cover">
-      <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center px-4 md:px-16">
-        <h1 class="text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center">
-           Cabinet Stéphane Haddad
-        </h1>
-      </div>
-    </div>
-  </div>
-
-  <!-- Flèches navigation -->
-  <button id="prev" class="absolute left-4 top-1/2 transform -translate-y-1/2 text-white bg-black bg-opacity-30 hover:bg-opacity-60 rounded-full p-2 z-20">
-    <i data-feather="chevron-left"></i>
-  </button>
-  <button id="next" class="absolute right-4 top-1/2 transform -translate-y-1/2 text-white bg-black bg-opacity-30 hover:bg-opacity-60 rounded-full p-2 z-20">
-    <i data-feather="chevron-right"></i>
-  </button>
-</section>
-
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-  feather.replace();
-
-  const track = document.getElementById('slider-track');
-  const slides = track.children;
-  const totalSlides = slides.length;
-  let currentIndex = 0;
-
-  function updateSlide(transition = true) {
-    track.style.transition = transition ? 'transform 0.7s ease-in-out' : 'none';
-    track.style.transform = `translateX(-${currentIndex * 100}%)`;
-  }
-
-  function nextSlide() {
-    currentIndex++;
-    updateSlide();
-
-    if (currentIndex === totalSlides - 1) {
-      // Retour instantané à la première slide après transition
-      setTimeout(() => {
-        currentIndex = 0;
-        updateSlide(false);
-      }, 700);
-    }
-  }
-
-  function prevSlide() {
-    if (currentIndex === 0) {
-      currentIndex = totalSlides - 2;
-      updateSlide(false);
-      setTimeout(() => {
-        currentIndex--;
-        updateSlide();
-      }, 10);
-    } else {
-      currentIndex--;
-      updateSlide();
-    }
-  }
-
-  document.getElementById('next').addEventListener('click', nextSlide);
-  document.getElementById('prev').addEventListener('click', prevSlide);
-
-  // Auto-slide toutes les 5 secondes
-  setInterval(nextSlide, 5000);
-});
-</script>
-
-
-    
-
-    <!-- About Section -->
-    <section class="py-16 bg-[#F1E7BC]">
-        <div class="container mx-auto px-4">
-            <div class="flex flex-col md:flex-row items-center">
-                <div class="md:w-1/2 mb-8 md:mb-0 md:pr-16" data-aos="fade-right">
-                    <img src="images_cabinet_haddad/DSC_4783.jpg"
-                        alt="Maître Dupont" class="rounded-lg shadow-xl w-full">
-                </div>
-                <div class="md:w-1/2" data-aos="fade-left">
-                    <h2 class="text-3xl font-bold text-blue-900 mb-6">Maître Stéphane Haddad</h2>
-                    <p class="text-gray-700 mb-4">
-                        Avocat titulaire d’un DESS de Fiscalité des Entreprises et d’un DEA en Droit des Obligations
-                        Civiles et Commerciales, Maître Stéphane HADDAD a acquis son expérience en matière de fiscalité
-                        et de droit des affaires dans des cabinets de réputation internationale avant de fonder son
-                        propre cabinet.
-                    </p>
-                    <p class="text-gray-700 mb-4">
-                        Il met ses compétences et ses plus de vingt ans d'expérience à votre service pour assurer des
-                        prestations de qualité et une
-                        écoute privilégiée de vos problèmes dans une structure à taille humaine et en s’entourant d’un
-                        réseau de confrères spécialisés.
-
-                    </p>
-                    <p class="text-gray-700 mb-6">
-                        Le cabinet assure naturellement la confidentialité de toutes les informations qui lui sont
-                        communiquées.
-
-                    </p>
-                    <a href="activites.html"
-                        class="text-blue-900 font-semibold hover:text-blue-700 inline-flex items-center">
-                        Découvrir mes domaines d'expertise <i data-feather="arrow-right" class="ml-2"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Expertise Section -->
-    <section class="py-16  bg-[#F1E7BC]">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center text-blue-900 mb-12" data-aos="fade-up">Domaines d'expertise</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2  gap-8">
-                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300"
-                    data-aos="fade-up" data-aos-delay="100">
-                    <div class="text-blue-900 mb-4">
-                        <i data-feather="dollar-sign" class="w-10 h-10"></i>
+                <div class="retro-slide">
+                    <img src="images_cabinet_haddad/corentin-J5TYAxwQoM8-unsplash.jpg" alt="">
+                    <div class="retro-slide-caption">
+                        <h2>Avocat en droit fiscal &amp; droit des affaires</h2>
                     </div>
-                    <h3 class="text-xl font-bold text-blue-900 mb-3">Droit fiscal</h3>
-                    <p class="text-gray-700">
-                        Assistance à contrôle et contentieux fiscal, Conseil et optimisation fiscale,
-                        fiscalité internationale, fiscalité patrimoniale.
-                    </p>
                 </div>
-                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300"
-                    data-aos="fade-up" data-aos-delay="200">
-                    <div class="text-blue-900 mb-4">
-                        <i data-feather="briefcase" class="w-10 h-10"></i>
+                <div class="retro-slide">
+                    <img src="images_cabinet_haddad/tingey-injury-law-firm-DZpc4UY8ZtY-unsplash.jpg" alt="">
+                    <div class="retro-slide-caption"></div>
+                </div>
+                <div class="retro-slide">
+                    <img src="images_cabinet_haddad/corentin-J5TYAxwQoM8-unsplash.jpg" alt="">
+                    <div class="retro-slide-caption"></div>
+                </div>
+                <div class="retro-slide">
+                    <img src="images_cabinet_haddad/tingey-injury-law-firm-DZpc4UY8ZtY-unsplash.jpg" alt="">
+                    <div class="retro-slide-caption">
+                        <h2>Cabinet Stéphane Haddad</h2>
                     </div>
-                    <h3 class="text-xl font-bold text-blue-900 mb-3">Droit des affaires</h3>
-                    <p class="text-gray-700">
-                        Conseil aux entreprises, droit des sociétés, contrats commerciaux, et contentieux commerciaux.
-                    </p>
                 </div>
             </div>
+            <button type="button" class="retro-slider-btn prev" id="prev" aria-label="Diapositive précédente">‹</button>
+            <button type="button" class="retro-slider-btn next" id="next" aria-label="Diapositive suivante">›</button>
         </div>
-    </section>
 
-    <!-- CTA Section -->
-    <section class="py-16 bg-[#F1E7BC]">
-        <div class="container mx-auto px-4 text-center">
-            <h2 class="text-3xl font-bold text-blue-900 mb-6" data-aos="fade-up">Vous avez une question juridique ?</h2>
-            <p class="text-xl text-gray-700 mb-8 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">
-                Mon cabinet est à votre disposition pour répondre à vos interrogations et vous accompagner dans vos
-                projets.
-            </p>
-            <div class="flex flex-col sm:flex-row justify-center gap-4" data-aos="fade-up" data-aos-delay="200">
-                <a href="contact.html"
-                    class="bg-blue-900 hover:bg-blue-800 text-white font-bold py-3 px-8 rounded transition duration-300 inline-flex items-center justify-center">
-                    Prendre rendez-vous <i data-feather="calendar" class="ml-2"></i>
-                </a>
-                <a href="faq.html"
-                    class="bg-transparent border-2 border-blue-900 text-blue-900 hover:bg-blue-900 hover:text-white font-bold py-3 px-8 rounded transition duration-300 inline-flex items-center justify-center">
-                    Consulter la FAQ <i data-feather="help-circle" class="ml-2"></i>
-                </a>
-            </div>
+        <div class="retro-main-grid">
+            <aside class="retro-sidebar">
+                <div class="retro-sidebar-photo-wrap">
+                    <span class="retro-sidebar-badge">Le Cabinet</span>
+                    <img src="images_cabinet_haddad/tingey-injury-law-firm-DZpc4UY8ZtY-unsplash.jpg"
+                        alt="Cabinet d'avocats">
+                </div>
+                <ul class="retro-side-nav">
+                    <li><a href="index.html" class="current"><strong>Me Stéphane Haddad</strong></a></li>
+                    <li><a href="activites.html">Les activités du cabinet</a></li>
+                    <li><a href="honoraires.html">Les honoraires</a></li>
+                    <li><a href="dossiers.html">Exemples de dossiers traités</a></li>
+                    <li><a href="publications.html">Chroniques</a></li>
+                </ul>
+            </aside>
+
+            <main class="retro-content">
+                <h1>→ ME STÉPHANE HADDAD</h1>
+                <img src="images_cabinet_haddad/DSC_4783.jpg" alt="Maître Stéphane Haddad" class="retro-float-portrait">
+                <p>
+                    Avocat titulaire d’un DESS de Fiscalité des Entreprises et d’un DEA en Droit des Obligations
+                    Civiles et Commerciales, Maître Stéphane HADDAD a acquis son expérience en matière de fiscalité
+                    et de droit des affaires dans des cabinets de réputation internationale avant de fonder son
+                    propre cabinet.
+                </p>
+                <p>
+                    Il met ses compétences et ses plus de vingt ans d'expérience à votre service pour assurer des
+                    prestations de qualité et une
+                    écoute privilégiée de vos problèmes dans une structure à taille humaine et en s’entourant d’un
+                    réseau de confrères spécialisés.
+                </p>
+                <p>
+                    Le cabinet assure naturellement la confidentialité de toutes les informations qui lui sont
+                    communiquées.
+                </p>
+
+                <div class="retro-contact-block">
+                    <p><strong>Adresse :</strong> 3 Av. Saint-Honoré d'Eylau, 75116 Paris</p>
+                    <p><strong>Tél.</strong> +33 1 56 79 00 20</p>
+                    <p><strong>Courriel :</strong> <a href="mailto:contact@cabinet-haddad.com">contact@cabinet-haddad.com</a></p>
+                </div>
+
+                <p>
+                    <a href="activites.html" class="retro-inline-link">Découvrir mes domaines d'expertise →</a>
+                </p>
+
+                <h2>Domaines d'expertise</h2>
+                <div class="retro-expertise">
+                    <div class="retro-expertise-box">
+                        <h3>Droit fiscal</h3>
+                        <p>
+                            Assistance à contrôle et contentieux fiscal, Conseil et optimisation fiscale,
+                            fiscalité internationale, fiscalité patrimoniale.
+                        </p>
+                    </div>
+                    <div class="retro-expertise-box">
+                        <h3>Droit des affaires</h3>
+                        <p>
+                            Conseil aux entreprises, droit des sociétés, contrats commerciaux, et contentieux commerciaux.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="retro-cta">
+                    <h2>Vous avez une question juridique ?</h2>
+                    <p>
+                        Mon cabinet est à votre disposition pour répondre à vos interrogations et vous accompagner dans vos
+                        projets.
+                    </p>
+                    <div class="retro-btn-row">
+                        <a href="contact.html" class="retro-btn retro-btn-primary">Prendre rendez-vous</a>
+                        <a href="faq.html" class="retro-btn retro-btn-outline">Consulter la FAQ</a>
+                    </div>
+                </div>
+            </main>
         </div>
-    </section>
 
-    <!-- Footer -->
-    <footer class="bg-[#943a3d] text-white py-12">
-        <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <footer class="retro-footer">
+            <div class="retro-footer-grid">
                 <div>
-                    <h3 class="text-xl font-bold gold-text mb-4">Cabinet Stéphane Haddad</h3>
-                    <p class="mb-4">
+                    <h3>Cabinet Stéphane Haddad</h3>
+                    <p>
                         Cabinet d'avocat spécialisé en droit fiscal et droit des affaires à Paris.
                     </p>
-                    <div class="flex space-x-4">
-                        <a href="https://www.linkedin.com/in/stephanehaddad/" target="_blank"
-                            class="text-gray-400 hover:text-white">
-                            <i data-feather="linkedin"></i>
-                        </a>
-                    </div>
+                    <p>
+                        <a href="https://www.linkedin.com/in/stephanehaddad/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                    </p>
                 </div>
                 <div>
-                    <h3 class="text-xl font-bold gold-text mb-4">Navigation</h3>
-                    <ul class="space-y-2">
-                        <li><a href="activites.html" class="hover:text-gray-300">Activités du cabinet</a></li>
-                        <li><a href="honoraires.html" class="hover:text-gray-300">Honoraires</a></li>
-                        <li><a href="dossiers.html" class="hover:text-gray-300">Exemples de dossiers</a></li>
-                        <li><a href="publications.html" class="hover:text-gray-300">Publications</a></li>
-                        <li><a href="faq.html" class="hover:text-gray-300">FAQ</a></li>
-                        <li><a href="contact.html" class="hover:text-gray-300">Contact</a></li>
+                    <h3>Navigation</h3>
+                    <ul>
+                        <li><a href="activites.html">Activités du cabinet</a></li>
+                        <li><a href="honoraires.html">Honoraires</a></li>
+                        <li><a href="dossiers.html">Exemples de dossiers</a></li>
+                        <li><a href="publications.html">Publications</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h3 class="text-xl font-bold gold-text mb-4">Contact</h3>
+                    <h3>Contact</h3>
                     <address class="not-italic">
-                        <p class="mb-2"><i data-feather="map-pin" class="inline mr-2"></i> 3 Av. Saint-Honoré d'Eylau,
-                            75116 Paris</p>
-                        <p class="mb-2"><i data-feather="phone" class="inline mr-2"></i> +33 1 56 79 00 20</p>
-                        <p class="mb-2"><i data-feather="mail" class="inline mr-2"></i> contact@cabinet-haddad.com</p>
+                        <p>3 Av. Saint-Honoré d'Eylau, 75116 Paris</p>
+                        <p>+33 1 56 79 00 20</p>
+                        <p><a href="mailto:contact@cabinet-haddad.com">contact@cabinet-haddad.com</a></p>
                     </address>
                 </div>
             </div>
-            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+            <div class="retro-footer-bar">
                 <p>&copy; 2025 Cabinet Stéphane Haddad. Tous droits réservés.</p>
-                <p class="mt-2"><a href="mentions-legales.html" class="hover:text-gray-300">Mentions légales</a></p>
+                <p><a href="mentions-legales.html">Mentions légales</a></p>
             </div>
-        </div>
-    </footer>
+        </footer>
+    </div>
 
     <script>
-        AOS.init({
-            duration: 800,
-            easing: 'ease-in-out',
-            once: true
-        });
+        document.addEventListener('DOMContentLoaded', () => {
+            const track = document.getElementById('slider-track');
+            const slides = track.children;
+            const totalSlides = slides.length;
+            let currentIndex = 0;
 
-        // Mobile menu toggle
-        document.getElementById('mobile-menu-button').addEventListener('click', function () {
-            const menu = document.getElementById('mobile-menu');
-            menu.classList.toggle('hidden');
-        });
+            function updateSlide(transition) {
+                track.style.transition = transition ? 'transform 0.7s ease-in-out' : 'none';
+                track.style.transform = 'translateX(-' + (currentIndex * 100) + '%)';
+            }
 
-        feather.replace();
+            function nextSlide() {
+                currentIndex++;
+                updateSlide(true);
+                if (currentIndex === totalSlides - 1) {
+                    setTimeout(function () {
+                        currentIndex = 0;
+                        updateSlide(false);
+                    }, 700);
+                }
+            }
+
+            function prevSlide() {
+                if (currentIndex === 0) {
+                    currentIndex = totalSlides - 2;
+                    updateSlide(false);
+                    setTimeout(function () {
+                        currentIndex--;
+                        updateSlide(true);
+                    }, 10);
+                } else {
+                    currentIndex--;
+                    updateSlide(true);
+                }
+            }
+
+            document.getElementById('next').addEventListener('click', nextSlide);
+            document.getElementById('prev').addEventListener('click', prevSlide);
+            setInterval(nextSlide, 5000);
+
+            const btn = document.getElementById('mobile-menu-button');
+            const nav = document.getElementById('top-nav');
+            if (btn && nav) {
+                btn.addEventListener('click', function () {
+                    const open = nav.classList.toggle('open');
+                    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+                });
+            }
+        });
     </script>
 </body>
-
-<script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const dropdown = document.querySelector('.cabinet-dropdown');
-        const checkbox = document.getElementById('dropdown-cabinet');
-
-        if (dropdown && checkbox) {
-            document.addEventListener('click', (e) => {
-                // Si on clique en dehors du dropdown -> fermer
-                if (!dropdown.contains(e.target)) {
-                    checkbox.checked = false;
-                }
-            });
-        }
-    });
-</script>
 
 </html>
