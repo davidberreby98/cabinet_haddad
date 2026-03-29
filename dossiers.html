@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <div class="retro-frame">
+    <div class="retro-frame retro-frame--split">
         <header class="retro-header">
             <div class="retro-brand">
                 <a href="index.html">Cabinet Stéphane Haddad</a>
@@ -23,7 +23,7 @@
             </nav>
         </header>
 
-        <div class="retro-main-grid">
+        <div class="retro-main-grid retro-main-grid--split">
             <aside class="retro-sidebar" aria-label="Sous-navigation">
                 <div class="retro-sidebar-photo-wrap">
                     <span class="retro-sidebar-badge">Le Cabinet</span>
@@ -38,8 +38,9 @@
                 </ul>
             </aside>
 
-            <main id="contenu-principal" class="retro-content retro-content--page">
-                <h1>→ EXEMPLES DE DOSSIERS TRAITÉS</h1>
+            <main id="contenu-principal" class="retro-split-main">
+                <div class="retro-content retro-content--page retro-split-intro">
+                <h1 class="retro-section-title--center" style="margin-top:0;">→ EXEMPLES DE DOSSIERS TRAITÉS</h1>
 
                 <nav id="sommaire" class="retro-toc" aria-label="Table des matières">
                     <a href="#fiscalite-particuliers">Fiscalité des particuliers</a>
@@ -47,6 +48,8 @@
                     <a href="#fiscalite-internationale">Fiscalité internationale</a>
                     <a href="#prestations-juridiques">Prestations juridiques</a>
                 </nav>
+                </div>
+                <div class="retro-content retro-content--page retro-split-wide">
 
                 <section id="fiscalite-particuliers" class="retro-dossier-section" aria-labelledby="h-fp">
                     <div class="retro-dossier-head">
@@ -153,6 +156,7 @@
                         <a href="contact.html" class="retro-btn retro-btn-primary">Prendre rendez-vous</a>
                         <a href="faq.html" class="retro-btn retro-btn-outline">Consulter la FAQ</a>
                     </div>
+                </div>
                 </div>
             </main>
         </div>
