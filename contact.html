@@ -4,278 +4,165 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - Cabinet Stéphane haddad</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
-    <script src="https://unpkg.com/feather-icons"></script>
-    <style>
-        .hero-image {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1516387938699-a93567ec168e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
-            background-size: cover;
-            background-position: center;
-        }
-
-        .gold-text {
-            color: #D4AF37;
-        }
-
-        .gold-border {
-            border-color: #D4AF37;
-        }
-                * {
-            font-family: Verdana, Geneva, sans-serif;
-        }
-    </style>
+    <title>Contact - Cabinet Stéphane Haddad</title>
+    <link rel="stylesheet" href="css/retro-cabinet.css">
 </head>
 
-<body class="font-sans bg-gray-50 ">
+<body>
+    <div class="retro-frame">
+        <header class="retro-header">
+            <div class="retro-brand">
+                <a href="index.html">Cabinet Stéphane Haddad</a>
+            </div>
+            <nav class="retro-topnav" id="top-nav" aria-label="Navigation principale">
+                <a href="index.html">→ LE CABINET</a>
+                <a href="activites.html">CONTRÔLE FISCAL</a>
+                <a href="faq.html">FAQ</a>
+                <a href="publications.html">LIENS</a>
+                <a href="contact.html" aria-current="page">CONTACT</a>
+            </nav>
+        </header>
 
-    <nav class="bg-[#943a3d] text-white sticky top-0 z-50 shadow-lg">
-        <div class="container mx-auto px-4 py-6">
-            <div class="flex justify-between items-center mr-12">
-                <!-- Logo / Nom -->
-                <a href="index.html" class="text-lg md:text-xl lg:text-2xl font-bold ">Cabinet Stéphane
-                    Haddad</a>
+        <div class="retro-main-grid">
+            <aside class="retro-sidebar" aria-label="Sous-navigation">
+                <div class="retro-sidebar-photo-wrap">
+                    <span class="retro-sidebar-badge">Le Cabinet</span>
+                    <img src="images_cabinet_haddad/tingey-injury-law-firm-DZpc4UY8ZtY-unsplash.jpg" alt="">
+                </div>
+                <ul class="retro-side-nav">
+                    <li><a href="index.html"><strong>Me Stéphane Haddad</strong></a></li>
+                    <li><a href="activites.html">Les activités du cabinet</a></li>
+                    <li><a href="honoraires.html">Les honoraires</a></li>
+                    <li><a href="dossiers.html">Exemples de dossiers traités</a></li>
+                    <li><a href="publications.html">Chroniques</a></li>
+                </ul>
+            </aside>
 
-
-                <!-- Menu desktop -->
-                <div class="hidden md:flex space-x-4 lg:space-x-8 xl:space-x-12 2xl:space-x-20">
-
-
-                    <!-- wrapper : assure-toi que c'est inséré à l'endroit de ton menu "Le cabinet" -->
-                    <div class="relative group cabinet-dropdown">
-                        <!-- checkbox cachée si tu veux aussi le clic -->
-                        <input type="checkbox" id="dropdown-cabinet" class="peer hidden">
-
-                        <!-- Bouton (label si checkbox utilisée) -->
-                        <label for="dropdown-cabinet"
-                            class="flex items-center text-base md:text-lg lg:text-xl hover:text-gray-300 cursor-pointer select-none">
-                            Le cabinet <i data-feather="chevron-down" class="ml-1"></i>
-                        </label>
-
-                        <!-- Menu déroulant -->
-                        <div class="absolute left-0 top-full mt-0 w-56 bg-white text-blue-900 rounded-md shadow-lg py-2 z-50
-           opacity-0 invisible 
-           group-hover:opacity-100 group-hover:visible 
-           peer-checked:opacity-100 peer-checked:visible 
-           transition-opacity duration-150 pointer-events-auto">
-                            <a href="activites.html"
-                                class="block px-4 py-2 text-base md:text-lg hover:bg-blue-100">Activités du cabinet</a>
-                            <a href="honoraires.html"
-                                class="block px-4 py-2 text-base md:text-lg hover:bg-blue-100">Honoraires</a>
-                            <a href="dossiers.html"
-                                class="block px-4 py-2 text-base md:text-lg hover:bg-blue-100">Exemples de dossiers</a>
-                        </div>
-                    </div>
-
-                    <!-- Autres liens -->
-                    <a href="publications.html"
-                        class="text-base md:text-lg lg:text-xl hover:text-gray-300">Publications</a>
-                    <a href="faq.html" class="text-base md:text-lg lg:text-xl hover:text-gray-300">FAQ</a>
-                    <a href="contact.html" class="text-base md:text-lg lg:text-xl hover:text-gray-300">Contact</a>
+            <main id="contenu-principal" class="retro-content retro-content--page">
+                <div class="retro-article-hero" style="margin-top:-4px;">
+                    <p class="retro-article-hero-meta">Contact</p>
+                    <h1>Contactez-nous</h1>
+                    <p style="margin:12px 0 0;font-size:0.9rem;opacity:0.95;">
+                        Prenez rendez-vous pour une consultation personnalisée
+                    </p>
                 </div>
 
-                <!-- Bouton menu mobile -->
-                <button class="md:hidden focus:outline-none" id="mobile-menu-button">
-                    <i data-feather="menu"></i>
-                </button>
-            </div>
-
-            <!-- Menu mobile -->
-            <div class="md:hidden hidden mt-2" id="mobile-menu">
-                <a href="activites.html" class="block py-2 px-2 text-base hover:bg-blue-800">Activités du cabinet</a>
-                <a href="honoraires.html" class="block py-2 px-2 text-base hover:bg-blue-800">Honoraires</a>
-                <a href="dossiers.html" class="block py-2 px-2 text-base hover:bg-blue-800">Exemples de dossiers</a>
-                <a href="publications.html" class="block py-2 px-2 text-base hover:bg-blue-800">Publications</a>
-                <a href="faq.html" class="block py-2 px-2 text-base hover:bg-blue-800">FAQ</a>
-                <a href="contact.html" class="block py-2 px-2 text-base hover:bg-blue-800">Contact</a>
-            </div>
-        </div>
-    </nav>
-
-
-
-    <!-- Hero Section -->
-    <section class="hero-image text-white py-32">
-        <div class="container mx-auto px-4 text-center">
-            <h1 class="text-4xl md:text-5xl font-bold mb-6" data-aos="fade-up">Contactez-nous</h1>
-            <p class="text-xl md:text-2xl mb-8 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">
-                Prenez rendez-vous pour une consultation personnalisée
-            </p>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="py-16 bg-[#F1E7BC]">
-        <div class="container mx-auto px-4">
-            <div class="flex flex-col md:flex-row">
-                <!-- Contact Form -->
-                <div class="md:w-1/2 md:pr-8 mb-12 md:mb-0" data-aos="fade-right">
-                    <h2 class="text-3xl font-bold text-blue-900 mb-6">Envoyez-nous un message</h2>
-                    <form class="space-y-6">
-                        <div>
-                            <label for="name" class="block text-gray-700 mb-2">Nom complet</label>
-                            <input type="text" id="name"
-                                class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-900">
-                        </div>
-                        <div>
-                            <label for="email" class="block text-gray-700 mb-2">Email</label>
-                            <input type="email" id="email"
-                                class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-900">
-                        </div>
-                        <div>
-                            <label for="phone" class="block text-gray-700 mb-2">Téléphone</label>
-                            <input type="tel" id="phone"
-                                class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-900">
-                        </div>
-                        <div>
-                            <label for="subject" class="block text-gray-700 mb-2">Sujet</label>
-                            <select id="subject"
-                                class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-900">
-                                <option value="">Sélectionnez un sujet</option>
-                                <option value="fiscal">Conseil fiscal</option>
-                                <option value="business">Droit des affaires</option>
-                                <option value="patrimonial">Droit patrimonial</option>
-                                <option value="other">Autre</option>
-                            </select>
-                        </div>
-                        <div>
-                            <label for="message" class="block text-gray-700 mb-2">Message</label>
-                            <textarea id="message" rows="5"
-                                class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-900"></textarea>
-                        </div>
-                        <button type="submit"
-                            class="bg-blue-900 hover:bg-blue-800 text-white font-bold py-3 px-8 rounded transition duration-300">
-                            Envoyer le message
-                        </button>
-                    </form>
-                </div>
-
-                <!-- Contact Info -->
-                <div class="md:w-1/2 md:pl-8" data-aos="fade-left">
-                    <h2 class="text-3xl font-bold text-blue-900 mb-6">Informations de contact</h2>
-                    <div class="space-y-6">
-                        <div class="flex items-start">
-                            <div class="text-blue-900 mr-4">
-                                <i data-feather="map-pin" class="w-6 h-6"></i>
+                <div class="retro-contact-split">
+                    <div>
+                        <h2 style="margin:0 0 16px;font-size:1rem;color:var(--forest);text-transform:uppercase;">Envoyez-nous un message</h2>
+                        <form class="retro-form" action="#" method="post">
+                            <div>
+                                <label for="name">Nom complet</label>
+                                <input type="text" id="name" name="name" autocomplete="name">
                             </div>
                             <div>
-                                <h3 class="text-xl font-semibold text-blue-900 mb-2">Adresse</h3>
-                                <p class="text-gray-700">3 Av. Saint-Honoré d'Eylau, 75116 Paris</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start">
-                            <div class="text-blue-900 mr-4">
-                                <i data-feather="phone" class="w-6 h-6"></i>
+                                <label for="email">Courriel</label>
+                                <input type="email" id="email" name="email" autocomplete="email">
                             </div>
                             <div>
-                                <h3 class="text-xl font-semibold text-blue-900 mb-2">Téléphone</h3>
-                                <p class="text-gray-700">06 20 60 72 38</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start">
-                            <div class="text-blue-900 mr-4">
-                                <i data-feather="mail" class="w-6 h-6"></i>
+                                <label for="phone">Téléphone</label>
+                                <input type="tel" id="phone" name="phone" autocomplete="tel">
                             </div>
                             <div>
-                                <h3 class="text-xl font-semibold text-blue-900 mb-2">Email</h3>
-                                <p class="text-gray-700">contact@cabinet-haddad.com</p>
+                                <label for="subject">Sujet</label>
+                                <select id="subject" name="subject">
+                                    <option value="">Sélectionnez un sujet</option>
+                                    <option value="fiscal">Conseil fiscal</option>
+                                    <option value="business">Droit des affaires</option>
+                                    <option value="patrimonial">Droit patrimonial</option>
+                                    <option value="other">Autre</option>
+                                </select>
                             </div>
-                        </div>
-
+                            <div>
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" rows="5"></textarea>
+                            </div>
+                            <button type="submit" class="retro-btn retro-btn-primary" style="border:none;cursor:pointer;">
+                                Envoyer le message
+                            </button>
+                        </form>
                     </div>
-
-                    <div class="mt-8">
-                        <h3 class="text-xl font-semibold text-blue-900 mb-4">Plan d'accès</h3>
-                        <div class="rounded-lg overflow-hidden h-64 md:h-80 lg:h-80">
-                            <iframe
+                    <div>
+                        <h2 style="margin:0 0 16px;font-size:1rem;color:var(--forest);text-transform:uppercase;">Informations de contact</h2>
+                        <div class="retro-info-row">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" aria-hidden="true">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                            <div>
+                                <h3>Adresse</h3>
+                                <p style="margin:0;color:var(--text-body);">3 Av. Saint-Honoré d'Eylau, 75116 Paris</p>
+                            </div>
+                        </div>
+                        <div class="retro-info-row">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" aria-hidden="true">
+                                <path
+                                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                                </path>
+                            </svg>
+                            <div>
+                                <h3>Téléphone</h3>
+                                <p style="margin:0;color:var(--text-body);">06 20 60 72 38</p>
+                            </div>
+                        </div>
+                        <div class="retro-info-row">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" aria-hidden="true">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                            <div>
+                                <h3>Courriel</h3>
+                                <p style="margin:0;"><a href="mailto:contact@cabinet-haddad.com" class="retro-inline-link">contact@cabinet-haddad.com</a></p>
+                            </div>
+                        </div>
+                        <h3 style="margin:20px 0 8px;font-size:0.95rem;color:var(--forest);">Plan d'accès</h3>
+                        <div class="retro-map-box">
+                            <iframe title="Plan d'accès au cabinet"
                                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.303514552345!2d2.285280215674088!3d48.868631979288954!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66fc918e46f1d%3A0xe4e2f7fbd2e1a17b!2s3%20Av.%20Saint-Honor%C3%A9%20d'Eylau%2C%2075116%20Paris!5e0!3m2!1sfr!2sfr!4v1693927567890!5m2!1sfr!2sfr"
                                 width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
-                                referrerpolicy="no-referrer-when-downgrade">
-                            </iframe>
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
                         </div>
                     </div>
                 </div>
-            </div>
+            </main>
         </div>
-    </section>
 
-    <!-- Footer -->
-    <footer class="bg-[#943a3d] text-white py-12">
-        <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <footer class="retro-footer">
+            <div class="retro-footer-grid">
                 <div>
-                    <h3 class="text-xl font-bold gold-text mb-4">Cabinet Stéphane Haddad</h3>
-                    <p class="mb-4">
-                        Cabinet d'avocat spécialisé en droit fiscal et droit des affaires à Paris.
-                    </p>
-                    <div class="flex space-x-4">
-                        <a href="https://www.linkedin.com/in/stephanehaddad/" target="_blank" class="text-gray-400 hover:text-white">
-                            <i data-feather="linkedin"></i>
-                        </a>
-                    </div>
+                    <h3>Cabinet Stéphane Haddad</h3>
+                    <p>Cabinet d'avocat spécialisé en droit fiscal et droit des affaires à Paris.</p>
+                    <p><a href="https://www.linkedin.com/in/stephanehaddad/" target="_blank" rel="noopener noreferrer">LinkedIn</a></p>
                 </div>
                 <div>
-                    <h3 class="text-xl font-bold gold-text mb-4">Navigation</h3>
-                    <ul class="space-y-2">
-                        <li><a href="activites.html" class="hover:text-gray-300">Activités du cabinet</a></li>
-                        <li><a href="honoraires.html" class="hover:text-gray-300">Honoraires</a></li>
-                        <li><a href="dossiers.html" class="hover:text-gray-300">Exemples de dossiers</a></li>
-                        <li><a href="publications.html" class="hover:text-gray-300">Publications</a></li>
-                        <li><a href="faq.html" class="hover:text-gray-300">FAQ</a></li>
-                        <li><a href="contact.html" class="hover:text-gray-300">Contact</a></li>
+                    <h3>Navigation</h3>
+                    <ul>
+                        <li><a href="activites.html">Activités du cabinet</a></li>
+                        <li><a href="honoraires.html">Honoraires</a></li>
+                        <li><a href="dossiers.html">Exemples de dossiers</a></li>
+                        <li><a href="publications.html">Publications</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h3 class="text-xl font-bold gold-text mb-4">Contact</h3>
+                    <h3>Contact</h3>
                     <address class="not-italic">
-                        <p class="mb-2"><i data-feather="map-pin" class="inline mr-2"></i> 3 Av. Saint-Honoré d'Eylau,
-                            75116 Paris</p>
-                        <p class="mb-2"><i data-feather="phone" class="inline mr-2"></i> +33 (0)6 20 60 72 38</p>
-                        <p class="mb-2"><i data-feather="mail" class="inline mr-2"></i> contact@cabinet-haddad.com</p>
+                        <p>3 Av. Saint-Honoré d'Eylau, 75116 Paris</p>
+                        <p>+33 (0)6 20 60 72 38</p>
+                        <p><a href="mailto:contact@cabinet-haddad.com">contact@cabinet-haddad.com</a></p>
                     </address>
                 </div>
             </div>
-            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+            <div class="retro-footer-bar">
                 <p>&copy; 2025 Cabinet Stéphane Haddad. Tous droits réservés.</p>
-                <p class="mt-2"><a href="mentions-legales.html" class="hover:text-gray-300">Mentions légales</a></p>
+                <p><a href="mentions-legales.html">Mentions légales</a></p>
             </div>
-        </div>
-    </footer>
-
-    <script>
-        AOS.init({
-            duration: 800,
-            easing: 'ease-in-out',
-            once: true
-        });
-
-        // Mobile menu toggle
-        document.getElementById('mobile-menu-button').addEventListener('click', function () {
-            const menu = document.getElementById('mobile-menu');
-            menu.classList.toggle('hidden');
-        });
-
-        feather.replace();
-    </script>
+        </footer>
+    </div>
 </body>
-
-<script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const dropdown = document.querySelector('.cabinet-dropdown');
-        const checkbox = document.getElementById('dropdown-cabinet');
-
-        if (dropdown && checkbox) {
-            document.addEventListener('click', (e) => {
-                // Si on clique en dehors du dropdown -> fermer
-                if (!dropdown.contains(e.target)) {
-                    checkbox.checked = false;
-                }
-            });
-        }
-    });
-</script>
 
 </html>

@@ -5,146 +5,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FAQ - Cabinet Stéphane Haddad - Avocat en Droit Fiscal et Droit des Affaires</title>
+    <link rel="stylesheet" href="css/retro-cabinet.css">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
-    <script src="https://unpkg.com/feather-icons"></script>
-    <style>
-        .hero-image {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
-            background-size: cover;
-            background-position: center;
-        }
-
-        .accordion-item {
-            border-bottom: 1px solid #e2e8f0;
-        }
-
-        .accordion-header {
-            cursor: pointer;
-            padding: 1.5rem 0;
-            position: relative;
-        }
-
-        .accordion-content {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease-out;
-            padding: 0 1rem;
-        }
-
-        .accordion-content.active {
-            max-height: none;
-            /* display: block; */
-            padding-bottom: 1.5rem;
-        }
-
-        .accordion-icon {
-            transition: transform 0.3s ease;
-        }
-
-        .accordion-icon.active {
-            transform: rotate(180deg);
-        }
-
-        .gold-text {
-            color: #D4AF37;
-        }
-
-        .gold-border {
-            border-color: #D4AF37;
-        }
-
-        * {
-            font-family: Verdana, Geneva, sans-serif;
-        }
-    </style>
 </head>
 
-<body class="font-sans bg-gray-50">
+<body>
+    <div class="retro-frame">
+        <header class="retro-header">
+            <div class="retro-brand">
+                <a href="index.html">Cabinet Stéphane Haddad</a>
+            </div>
+            <nav class="retro-topnav" id="top-nav" aria-label="Navigation principale">
+                <a href="index.html">→ LE CABINET</a>
+                <a href="activites.html">CONTRÔLE FISCAL</a>
+                <a href="faq.html" aria-current="page">FAQ</a>
+                <a href="publications.html">LIENS</a>
+                <a href="contact.html">CONTACT</a>
+            </nav>
+        </header>
 
-    <nav class="bg-[#943a3d] text-white sticky top-0 z-50 shadow-lg">
-        <div class="container mx-auto px-4 py-6">
-            <div class="flex justify-between items-center mr-12">
-                <!-- Logo / Nom -->
-                <a href="index.html" class="text-lg md:text-xl lg:text-2xl font-bold">Cabinet Stéphane
-                    Haddad</a>
-
-
-                <!-- Menu desktop -->
-                <div class="hidden md:flex space-x-4 lg:space-x-8 xl:space-x-12 2xl:space-x-20">
-
-
-                    <!-- wrapper : assure-toi que c'est inséré à l'endroit de ton menu "Le cabinet" -->
-                    <div class="relative group cabinet-dropdown">
-                        <!-- checkbox cachée si tu veux aussi le clic -->
-                        <input type="checkbox" id="dropdown-cabinet" class="peer hidden">
-
-                        <!-- Bouton (label si checkbox utilisée) -->
-                        <label for="dropdown-cabinet"
-                            class="flex items-center text-base md:text-lg lg:text-xl hover:text-gray-300 cursor-pointer select-none">
-                            Le cabinet <i data-feather="chevron-down" class="ml-1"></i>
-                        </label>
-
-                        <!-- Menu déroulant -->
-                        <div class="absolute left-0 top-full mt-0 w-56 bg-white text-blue-900 rounded-md shadow-lg py-2 z-50
-           opacity-0 invisible 
-           group-hover:opacity-100 group-hover:visible 
-           peer-checked:opacity-100 peer-checked:visible 
-           transition-opacity duration-150 pointer-events-auto">
-                            <a href="activites.html"
-                                class="block px-4 py-2 text-base md:text-lg hover:bg-blue-100">Activités du cabinet</a>
-                            <a href="honoraires.html"
-                                class="block px-4 py-2 text-base md:text-lg hover:bg-blue-100">Honoraires</a>
-                            <a href="dossiers.html"
-                                class="block px-4 py-2 text-base md:text-lg hover:bg-blue-100">Exemples de dossiers</a>
-                        </div>
-                    </div>
-
-                    <!-- Autres liens -->
-                    <a href="publications.html"
-                        class="text-base md:text-lg lg:text-xl hover:text-gray-300">Publications</a>
-                    <a href="faq.html" class="text-base md:text-lg lg:text-xl hover:text-gray-300">FAQ</a>
-                    <a href="contact.html" class="text-base md:text-lg lg:text-xl hover:text-gray-300">Contact</a>
+        <div class="retro-main-grid">
+            <aside class="retro-sidebar" aria-label="Sous-navigation">
+                <div class="retro-sidebar-photo-wrap">
+                    <span class="retro-sidebar-badge">Le Cabinet</span>
+                    <img src="images_cabinet_haddad/tingey-injury-law-firm-DZpc4UY8ZtY-unsplash.jpg" alt="">
                 </div>
+                <ul class="retro-side-nav">
+                    <li><a href="index.html"><strong>Me Stéphane Haddad</strong></a></li>
+                    <li><a href="activites.html">Les activités du cabinet</a></li>
+                    <li><a href="honoraires.html">Les honoraires</a></li>
+                    <li><a href="dossiers.html">Exemples de dossiers traités</a></li>
+                    <li><a href="publications.html">Chroniques</a></li>
+                </ul>
+            </aside>
 
-                <!-- Bouton menu mobile -->
-                <button class="md:hidden focus:outline-none" id="mobile-menu-button">
-                    <i data-feather="menu"></i>
-                </button>
-            </div>
+            <main id="contenu-principal" class="retro-content retro-content--page">
+                <h1 class="retro-section-title--center" style="margin-top:0;">→ QUESTIONS FRÉQUENTES</h1>
+                <h2 class="retro-faq-title">Questions fréquentes</h2>
 
-            <!-- Menu mobile -->
-            <div class="md:hidden hidden mt-2" id="mobile-menu">
-                <a href="activites.html" class="block py-2 px-2 text-base hover:bg-blue-800">Activités du cabinet</a>
-                <a href="honoraires.html" class="block py-2 px-2 text-base hover:bg-blue-800">Honoraires</a>
-                <a href="dossiers.html" class="block py-2 px-2 text-base hover:bg-blue-800">Exemples de dossiers</a>
-                <a href="publications.html" class="block py-2 px-2 text-base hover:bg-blue-800">Publications</a>
-                <a href="faq.html" class="block py-2 px-2 text-base hover:bg-blue-800">FAQ</a>
-                <a href="contact.html" class="block py-2 px-2 text-base hover:bg-blue-800">Contact</a>
-            </div>
-        </div>
-    </nav>
+<div class="accordion retro-accordion">
 
 
-
-
-
-    <!-- FAQ Section -->
-    <section class="py-16  bg-[#F1E7BC]">
-        <div class="container mx-auto px-4 max-w-4xl">
-            <h2 class="text-3xl font-bold text-center text-blue-900 mb-12" data-aos="fade-up">Questions fréquentes</h2>
-
-            <div class="accordion">
-
-
-                <div class="accordion-item" data-aos="fade-up" data-aos-delay="250">
-                    <div class="accordion-header flex justify-between items-center">
-                        <h3 class="text-xl font-semibold text-blue-900">Comment se déroule un contrôle fiscal ?</h3>
-                        <i data-feather="chevron-down" class="accordion-icon text-blue-900"></i>
+                <div class="accordion-item">
+                    <div class="accordion-header retro-faq-header" role="button" tabindex="0">
+                        <h3>Comment se déroule un contrôle fiscal ?</h3>
+                        <span class="accordion-icon retro-faq-chevron" aria-hidden="true">▼</span>
                     </div>
-                    <div class="accordion-content">
+                    <div class="retro-faq-panel accordion-content">
                         <div class="flex flex-col-reverse md:flex-row gap-6 items-start">
                         <div class="flex-1">
                         <p class="text-gray-700">
@@ -158,7 +65,7 @@
                         </ul>
                         </div>
                         <!-- Image à droite sur desktop, sous le texte sur mobile -->
-                        <div class="w-full md:w-1/2 flex-shrink-0" data-aos="fade-left">
+                        <div class="w-full md:w-1/2 flex-shrink-0">
                             <img src="images_cabinet_haddad/istockphoto-1484556993-612x612.jpg"
                                 alt="Examen de situation fiscale personnelle"
                                 class="rounded-lg shadow-lg object-cover w-full h-auto">
@@ -291,15 +198,15 @@
             </div>
 
 
-            <div class="accordion-item" data-aos="fade-up" data-aos-delay="400">
-                <div class="accordion-header flex justify-between items-center">
-                    <h3 class="text-xl font-semibold text-blue-900">
+            <div class="accordion-item">
+                <div class="accordion-header retro-faq-header" role="button" tabindex="0">
+                    <h3>
                         Qu’est-ce qu’un examen de situation fiscale personnelle (ESFP) ?
                     </h3>
-                    <i data-feather="chevron-down" class="accordion-icon text-blue-900"></i>
+                    <span class="accordion-icon retro-faq-chevron" aria-hidden="true">▼</span>
                 </div>
 
-                <div class="accordion-content mt-4 space-y-6">
+                <div class="retro-faq-panel accordion-content mt-4 space-y-6">
                     <!-- Texte + Image côte à côte / responsive -->
                     <div class="flex flex-col-reverse md:flex-row gap-6 items-start">
                         <!-- Texte à gauche -->
@@ -320,7 +227,7 @@
                         </div>
 
                         <!-- Image à droite sur desktop, sous le texte sur mobile -->
-                        <div class="w-full md:w-1/2 flex-shrink-0" data-aos="fade-left">
+                        <div class="w-full md:w-1/2 flex-shrink-0">
                             <img src="images_cabinet_haddad/istockphoto-2150649751-1024x1024.jpg"
                                 alt="Examen de situation fiscale personnelle"
                                 class="rounded-lg shadow-lg object-cover w-full h-auto">
@@ -391,14 +298,14 @@
 
 
             <!-- Question : Vérification de comptabilité -->
-            <div class="accordion-item" data-aos="fade-up" data-aos-delay="100">
-                <div class="accordion-header flex justify-between items-center">
-                    <h3 class="text-xl font-semibold text-blue-900">
+            <div class="accordion-item">
+                <div class="accordion-header retro-faq-header" role="button" tabindex="0">
+                    <h3>
                         Qu’est-ce qu’une vérification de comptabilité ?
                     </h3>
-                    <i data-feather="chevron-down" class="accordion-icon text-blue-900"></i>
+                    <span class="accordion-icon retro-faq-chevron" aria-hidden="true">▼</span>
                 </div>
-                <div class="accordion-content">
+                <div class="retro-faq-panel accordion-content">
                     <p class="text-gray-700">
                         Une vérification de comptabilité est un ensemble d’opérations ayant pour objet d’examiner la
                         comptabilité d’une entreprise (individuelle ou sous forme de société) et de la confronter à
@@ -459,14 +366,14 @@
 
 
             <!-- Question : Contrôle sur pièce -->
-            <div class="accordion-item" data-aos="fade-up" data-aos-delay="150">
-                <div class="accordion-header flex justify-between items-center">
-                    <h3 class="text-xl font-semibold text-blue-900">
+            <div class="accordion-item">
+                <div class="accordion-header retro-faq-header" role="button" tabindex="0">
+                    <h3>
                         Qu’est-ce que le contrôle sur pièce ?
                     </h3>
-                    <i data-feather="chevron-down" class="accordion-icon text-blue-900"></i>
+                    <span class="accordion-icon retro-faq-chevron" aria-hidden="true">▼</span>
                 </div>
-                <div class="accordion-content">
+                <div class="retro-faq-panel accordion-content">
                     <p class="text-gray-700">
                         Le contrôle sur pièces est constitué par l’ensemble des travaux de cabinet au cours desquels
                         l’administration procède à l’examen critique des déclarations à l’aide des renseignements et
@@ -486,14 +393,14 @@
             </div>
 
             <!-- Question : Procédure contradictoire -->
-            <div class="accordion-item" data-aos="fade-up" data-aos-delay="200">
-                <div class="accordion-header flex justify-between items-center">
-                    <h3 class="text-xl font-semibold text-blue-900">
+            <div class="accordion-item">
+                <div class="accordion-header retro-faq-header" role="button" tabindex="0">
+                    <h3>
                         Qu’est-ce que la procédure contradictoire ?
                     </h3>
-                    <i data-feather="chevron-down" class="accordion-icon text-blue-900"></i>
+                    <span class="accordion-icon retro-faq-chevron" aria-hidden="true">▼</span>
                 </div>
-                <div class="accordion-content">
+                <div class="retro-faq-panel accordion-content">
                     <p class="text-gray-700">
                         La procédure de redressement contradictoire s’applique lorsque le contribuable s’est
                         conformé à ses obligations déclaratives. Elle est caractérisée par une série d’échanges
@@ -515,14 +422,14 @@
             </div>
 
             <!-- Question : Taxation d’office -->
-            <div class="accordion-item" data-aos="fade-up" data-aos-delay="250">
-                <div class="accordion-header flex justify-between items-center">
-                    <h3 class="text-xl font-semibold text-blue-900">
+            <div class="accordion-item">
+                <div class="accordion-header retro-faq-header" role="button" tabindex="0">
+                    <h3>
                         Qu’est-ce que la procédure de taxation d’office ?
                     </h3>
-                    <i data-feather="chevron-down" class="accordion-icon text-blue-900"></i>
+                    <span class="accordion-icon retro-faq-chevron" aria-hidden="true">▼</span>
                 </div>
-                <div class="accordion-content">
+                <div class="retro-faq-panel accordion-content">
                     <p class="text-gray-700">
                         L’imposition d’office sanctionne le défaut ou le retard dans le dépôt de déclarations
                         destinées à
@@ -554,14 +461,14 @@
             </div>
 
             <!-- Question : Prescription en droit fiscal -->
-            <div class="accordion-item" data-aos="fade-up" data-aos-delay="300">
-                <div class="accordion-header flex justify-between items-center">
-                    <h3 class="text-xl font-semibold text-blue-900">
+            <div class="accordion-item">
+                <div class="accordion-header retro-faq-header" role="button" tabindex="0">
+                    <h3>
                         Qu’est-ce que la prescription en droit fiscal ?
                     </h3>
-                    <i data-feather="chevron-down" class="accordion-icon text-blue-900"></i>
+                    <span class="accordion-icon retro-faq-chevron" aria-hidden="true">▼</span>
                 </div>
-                <div class="accordion-content">
+                <div class="retro-faq-panel accordion-content">
                     <p class="text-gray-700">
                         La prescription est un processus qui a pour effet d’éteindre un droit ou une obligation par
                         le seul écoulement du temps lorsqu’elle est acquise. La prescription en droit fiscal peut
@@ -601,14 +508,14 @@
             </div>
 
             <!-- Question : Délais de prescription -->
-            <div class="accordion-item" data-aos="fade-up" data-aos-delay="350">
-                <div class="accordion-header flex justify-between items-center">
-                    <h3 class="text-xl font-semibold text-blue-900">
+            <div class="accordion-item">
+                <div class="accordion-header retro-faq-header" role="button" tabindex="0">
+                    <h3>
                         Quels sont les délais de prescription ?
                     </h3>
-                    <i data-feather="chevron-down" class="accordion-icon text-blue-900"></i>
+                    <span class="accordion-icon retro-faq-chevron" aria-hidden="true">▼</span>
                 </div>
-                <div class="accordion-content">
+                <div class="retro-faq-panel accordion-content">
                     <p class="text-gray-700">
                         Les délais de prescription varient selon la nature de l’imposition :
                     </p>
@@ -625,14 +532,14 @@
             </div>
 
             <!-- Question : Durée d’un contrôle fiscal -->
-            <div class="accordion-item" data-aos="fade-up" data-aos-delay="400">
-                <div class="accordion-header flex justify-between items-center">
-                    <h3 class="text-xl font-semibold text-blue-900">
+            <div class="accordion-item">
+                <div class="accordion-header retro-faq-header" role="button" tabindex="0">
+                    <h3>
                         Combien de temps dure un contrôle fiscal ?
                     </h3>
-                    <i data-feather="chevron-down" class="accordion-icon text-blue-900"></i>
+                    <span class="accordion-icon retro-faq-chevron" aria-hidden="true">▼</span>
                 </div>
-                <div class="accordion-content">
+                <div class="retro-faq-panel accordion-content">
                     <p class="text-gray-700">
                         Entre le début des opérations de vérification et la décision finale du Conseil d’État ou de
                         la Cour
@@ -647,15 +554,15 @@
 
 
             <!-- Q : Dirigeant ou associé d’une entreprise redressée -->
-            <div class="accordion-item" data-aos="fade-up" data-aos-delay="250">
-                <div class="accordion-header flex justify-between items-center">
-                    <h3 class="text-xl font-semibold text-blue-900">
+            <div class="accordion-item">
+                <div class="accordion-header retro-faq-header" role="button" tabindex="0">
+                    <h3>
                         Je suis dirigeant ou associé d’une entreprise qui est redressée : est-ce que je risque
                         quelque chose ?
                     </h3>
-                    <i data-feather="chevron-down" class="accordion-icon text-blue-900"></i>
+                    <span class="accordion-icon retro-faq-chevron" aria-hidden="true">▼</span>
                 </div>
-                <div class="accordion-content">
+                <div class="retro-faq-panel accordion-content">
                     <p class="text-gray-700">
                         Cela dépend des situations. Après un redressement d’une société lors d’une vérification de
                         comptabilité,
@@ -696,14 +603,14 @@
             </div>
 
             <!-- Q : Délais de paiement des impositions -->
-            <div class="accordion-item" data-aos="fade-up" data-aos-delay="300">
-                <div class="accordion-header flex justify-between items-center">
-                    <h3 class="text-xl font-semibold text-blue-900">
+            <div class="accordion-item">
+                <div class="accordion-header retro-faq-header" role="button" tabindex="0">
+                    <h3>
                         Dans quels délais dois-je régler les impositions notifiées ?
                     </h3>
-                    <i data-feather="chevron-down" class="accordion-icon text-blue-900"></i>
+                    <span class="accordion-icon retro-faq-chevron" aria-hidden="true">▼</span>
                 </div>
-                <div class="accordion-content">
+                <div class="retro-faq-panel accordion-content">
                     <p class="text-gray-700">
                         Le paiement n’est exigible qu’à la réception d’un avis de mise en recouvrement ou d’un avis
                         d’imposition.
@@ -729,14 +636,14 @@
             </div>
 
             <!-- Q : Droit de communication de l’administration -->
-            <div class="accordion-item" data-aos="fade-up" data-aos-delay="350">
-                <div class="accordion-header flex justify-between items-center">
-                    <h3 class="text-xl font-semibold text-blue-900">
+            <div class="accordion-item">
+                <div class="accordion-header retro-faq-header" role="button" tabindex="0">
+                    <h3>
                         Qu’est-ce que le droit de communication de l’administration ?
                     </h3>
-                    <i data-feather="chevron-down" class="accordion-icon text-blue-900"></i>
+                    <span class="accordion-icon retro-faq-chevron" aria-hidden="true">▼</span>
                 </div>
-                <div class="accordion-content">
+                <div class="retro-faq-panel accordion-content">
                     <p class="text-gray-700">
                         Le droit de communication permet à l’administration fiscale de prendre connaissance et, au
                         besoin,
@@ -764,14 +671,14 @@
             </div>
 
             <!-- Q : Acte anormal de gestion -->
-            <div class="accordion-item" data-aos="fade-up" data-aos-delay="400">
-                <div class="accordion-header flex justify-between items-center">
-                    <h3 class="text-xl font-semibold text-blue-900">
+            <div class="accordion-item">
+                <div class="accordion-header retro-faq-header" role="button" tabindex="0">
+                    <h3>
                         Qu’est-ce qu’un acte anormal de gestion ?
                     </h3>
-                    <i data-feather="chevron-down" class="accordion-icon text-blue-900"></i>
+                    <span class="accordion-icon retro-faq-chevron" aria-hidden="true">▼</span>
                 </div>
-                <div class="accordion-content">
+                <div class="retro-faq-panel accordion-content">
                     <p class="text-gray-700">
                         Un acte anormal de gestion est une décision qui met une dépense à la charge de l’entreprise
                         ou qui la prive d’une recette, sans justification par l’intérêt de l’exploitation.
@@ -797,14 +704,14 @@
 
 
             <!-- Q : Abus de droit -->
-            <div class="accordion-item" data-aos="fade-up" data-aos-delay="450">
-                <div class="accordion-header flex justify-between items-center">
-                    <h3 class="text-xl font-semibold text-blue-900">
+            <div class="accordion-item">
+                <div class="accordion-header retro-faq-header" role="button" tabindex="0">
+                    <h3>
                         Qu’est ce qu’un abus de droit (art. L 64 du LPF) ?
                     </h3>
-                    <i data-feather="chevron-down" class="accordion-icon text-blue-900"></i>
+                    <span class="accordion-icon retro-faq-chevron" aria-hidden="true">▼</span>
                 </div>
-                <div class="accordion-content mt-4">
+                <div class="retro-faq-panel accordion-content mt-4">
                     <p class="text-gray-700 mb-2">
                         Comme l’énonce avec maestria le Professeur Maurice Cozian dans son ouvrage Les grands
                         principes de la
@@ -894,14 +801,14 @@
             </div>
 
             <!-- Q : Moyens d’information -->
-            <div class="accordion-item" data-aos="fade-up" data-aos-delay="500">
-                <div class="accordion-header flex justify-between items-center">
-                    <h3 class="text-xl font-semibold text-blue-900">
+            <div class="accordion-item">
+                <div class="accordion-header retro-faq-header" role="button" tabindex="0">
+                    <h3>
                         Quels sont les moyens d’information de l’administration ?
                     </h3>
-                    <i data-feather="chevron-down" class="accordion-icon text-blue-900"></i>
+                    <span class="accordion-icon retro-faq-chevron" aria-hidden="true">▼</span>
                 </div>
-                <div class="accordion-content mt-4">
+                <div class="retro-faq-panel accordion-content mt-4">
                     <p class="text-gray-700 mb-2">
                         L’administration dispose de toute une panoplie de droits et de moyens pour contrôler un
                         contribuable
@@ -950,15 +857,15 @@
 
 
 
-            <div class="accordion-item" data-aos="fade-up" data-aos-delay="400">
-                <div class="accordion-header flex justify-between items-center">
-                    <h3 class="text-xl font-semibold text-blue-900">
+            <div class="accordion-item">
+                <div class="accordion-header retro-faq-header" role="button" tabindex="0">
+                    <h3>
                         Quel est le délai pour saisir les tribunaux ?
                     </h3>
-                    <i data-feather="chevron-down" class="accordion-icon text-blue-900"></i>
+                    <span class="accordion-icon retro-faq-chevron" aria-hidden="true">▼</span>
                 </div>
 
-                <div class="accordion-content mt-4 space-y-6">
+                <div class="retro-faq-panel accordion-content mt-4 space-y-6">
                     <!-- Texte + Image côte à côte / responsive -->
                     <div class="flex flex-col-reverse md:flex-row gap-6 items-start">
                         <!-- Texte à gauche -->
@@ -981,7 +888,7 @@
                         </div>
 
                         <!-- Image à droite sur desktop, sous le texte sur mobile -->
-                        <div class="w-full md:w-1/2 flex-shrink-0" data-aos="fade-left">
+                        <div class="w-full md:w-1/2 flex-shrink-0">
                             <img src="images_cabinet_haddad/dsc_0463.webp" alt="Examen de situation fiscale personnelle"
                                 class="rounded-lg shadow-lg object-cover w-full h-auto">
                         </div>
@@ -996,14 +903,14 @@
 
 
             <!-- Q : Avocat Fiscaliste -->
-            <div class="accordion-item" data-aos="fade-up" data-aos-delay="600">
-                <div class="accordion-header flex justify-between items-center">
-                    <h3 class="text-xl font-semibold text-blue-900">
+            <div class="accordion-item">
+                <div class="accordion-header retro-faq-header" role="button" tabindex="0">
+                    <h3>
                         A quoi sert un Avocat Fiscaliste, où est sa valeur ?
                     </h3>
-                    <i data-feather="chevron-down" class="accordion-icon text-blue-900"></i>
+                    <span class="accordion-icon retro-faq-chevron" aria-hidden="true">▼</span>
                 </div>
-                <div class="accordion-content mt-4 space-y-6">
+                <div class="retro-faq-panel accordion-content mt-4 space-y-6">
                     <div class="flex flex-col-reverse md:flex-row gap-6 items-start">
                         <div class="flex-1 text-gray-700">
                             <p class="text-gray-700 mb-2">
@@ -1024,7 +931,7 @@
                                 fiscales.
                             </p>
                         </div>
-                        <div class="w-full md:w-1/2 flex-shrink-0" data-aos="fade-left">
+                        <div class="w-full md:w-1/2 flex-shrink-0">
                             <img src="images_cabinet_haddad/bloc-02.jpg" alt="Examen de situation fiscale personnelle"
                                 class="rounded-lg shadow-lg object-cover w-full h-auto">
                         </div>
@@ -1105,15 +1012,15 @@
 
 
 
-            <div class="accordion-item" data-aos="fade-up" data-aos-delay="400">
-                <div class="accordion-header flex justify-between items-center">
-                    <h3 class="text-xl font-semibold text-blue-900">
+            <div class="accordion-item">
+                <div class="accordion-header retro-faq-header" role="button" tabindex="0">
+                    <h3>
                         A partir de quel montant est il intéressant de consulter un Avocat Fiscaliste ?
                     </h3>
-                    <i data-feather="chevron-down" class="accordion-icon text-blue-900"></i>
+                    <span class="accordion-icon retro-faq-chevron" aria-hidden="true">▼</span>
                 </div>
 
-                <div class="accordion-content mt-4 space-y-6">
+                <div class="retro-faq-panel accordion-content mt-4 space-y-6">
                     <!-- Texte + Image côte à côte / responsive -->
                     <div class="flex flex-col-reverse md:flex-row gap-6 items-start">
                         <!-- Texte à gauche -->
@@ -1144,7 +1051,7 @@
                         </div>
 
                         <!-- Image à droite sur desktop, sous le texte sur mobile -->
-                        <div class="w-full md:w-1/2 flex-shrink-0" data-aos="fade-left">
+                        <div class="w-full md:w-1/2 flex-shrink-0">
                             <img src="images_cabinet_haddad/droit-fiscal-1.jpg"
                                 alt="Examen de situation fiscale personnelle"
                                 class="rounded-lg shadow-lg object-cover w-full h-auto">
@@ -1156,14 +1063,14 @@
             </div>
 
             <!-- Q : Clients hors région parisienne -->
-            <div class="accordion-item" data-aos="fade-up" data-aos-delay="700">
-                <div class="accordion-header flex justify-between items-center">
-                    <h3 class="text-xl font-semibold text-blue-900">
+            <div class="accordion-item">
+                <div class="accordion-header retro-faq-header" role="button" tabindex="0">
+                    <h3>
                         Je n’habite pas en région parisienne : Pouvez vous quand même vous occuper de mon dossier ?
                     </h3>
-                    <i data-feather="chevron-down" class="accordion-icon text-blue-900"></i>
+                    <span class="accordion-icon retro-faq-chevron" aria-hidden="true">▼</span>
                 </div>
-                <div class="accordion-content mt-4">
+                <div class="retro-faq-panel accordion-content mt-4">
                     <p class="text-gray-700 mb-2">
                         Les distances aujourd’hui ne sont plus un obstacle. Le téléphone, le fax, le courrier, et
                         Internet,
@@ -1185,13 +1092,13 @@
 
 
             <!-- Question 6 -->
-            <div class="accordion-item" data-aos="fade-up" data-aos-delay="350">
-                <div class="accordion-header flex justify-between items-center">
-                    <h3 class="text-xl font-semibold text-blue-900">Quelle est votre expérience en contentieux
+            <div class="accordion-item">
+                <div class="accordion-header retro-faq-header" role="button" tabindex="0">
+                    <h3>Quelle est votre expérience en contentieux
                         fiscal ?</h3>
-                    <i data-feather="chevron-down" class="accordion-icon text-blue-900"></i>
+                    <span class="accordion-icon retro-faq-chevron" aria-hidden="true">▼</span>
                 </div>
-                <div class="accordion-content text-gray-700">
+                <div class="retro-faq-panel accordion-content text-gray-700">
                     <p class="text-gray-700">
                         Maître Stéphane Haddad dispose d'une solide expérience en contentieux fiscal acquise dans
                         des cabinets internationaux avant de fonder son propre cabinet. Il intervient régulièrement
@@ -1210,117 +1117,87 @@
             </div>
         </div>
 
-        <!-- CTA Section -->
-        <div class="mt-16 bg-blue-50 p-8 rounded-lg text-center" data-aos="fade-up">
-            <h3 class="text-2xl font-bold text-blue-900 mb-4">Vous ne trouvez pas réponse à votre question ?</h3>
-            <p class="text-gray-700 mb-6 max-w-2xl mx-auto">
-                Notre équipe est à votre disposition pour répondre à toutes vos interrogations. N'hésitez pas à nous
-                contacter directement.
-            </p>
-            <a href="contact.html"
-                class="bg-blue-900 hover:bg-blue-800 text-white font-bold py-3 px-8 rounded transition duration-300 inline-flex items-center">
-                Nous contacter <i data-feather="mail" class="ml-2"></i>
-            </a>
-        </div>
-        </div>
-    </section>
 
-    <!-- Footer -->
-    <footer class="bg-[#943a3d] text-white py-12">
-        <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+                <div class="retro-faq-cta">
+                    <h3>Vous ne trouvez pas réponse à votre question ?</h3>
+                    <p>
+                        Notre équipe est à votre disposition pour répondre à toutes vos interrogations. N'hésitez pas à nous
+                        contacter directement.
+                    </p>
+                    <a href="contact.html" class="retro-btn retro-btn-primary">Nous contacter</a>
+                </div>
+            </main>
+        </div>
+
+        <footer class="retro-footer">
+            <div class="retro-footer-grid">
                 <div>
-                    <h3 class="text-xl font-bold gold-text mb-4">Cabinet Stéphane Haddad</h3>
-                    <p class="mb-4">
+                    <h3>Cabinet Stéphane Haddad</h3>
+                    <p>
                         Cabinet d'avocat spécialisé en droit fiscal et droit des affaires à Paris.
                     </p>
-                    <div class="flex space-x-4">
-                        <a href="https://www.linkedin.com/in/stephanehaddad/" target="_blank"
-                            class="text-gray-400 hover:text-white">
-                            <i data-feather="linkedin"></i>
-                        </a>
-                    </div>
+                    <p>
+                        <a href="https://www.linkedin.com/in/stephanehaddad/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                    </p>
                 </div>
                 <div>
-                    <h3 class="text-xl font-bold gold-text mb-4">Navigation</h3>
-                    <ul class="space-y-2">
-                        <li><a href="activites.html" class="hover:text-gray-300">Activités du cabinet</a></li>
-                        <li><a href="honoraires.html" class="hover:text-gray-300">Honoraires</a></li>
-                        <li><a href="dossiers.html" class="hover:text-gray-300">Exemples de dossiers</a></li>
-                        <li><a href="publications.html" class="hover:text-gray-300">Publications</a></li>
-                        <li><a href="faq.html" class="hover:text-gray-300 font-semibold gold-text">FAQ</a></li>
-                        <li><a href="contact.html" class="hover:text-gray-300">Contact</a></li>
+                    <h3>Navigation</h3>
+                    <ul>
+                        <li><a href="activites.html">Activités du cabinet</a></li>
+                        <li><a href="honoraires.html">Honoraires</a></li>
+                        <li><a href="dossiers.html">Exemples de dossiers</a></li>
+                        <li><a href="publications.html">Publications</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h3 class="text-xl font-bold gold-text mb-4">Contact</h3>
+                    <h3>Contact</h3>
                     <address class="not-italic">
-                        <p class="mb-2"><i data-feather="map-pin" class="inline mr-2"></i> 3 Av. Saint-Honoré d'Eylau,
-                            75116 Paris</p>
-                        <p class="mb-2"><i data-feather="phone" class="inline mr-2"></i> +33 1 56 79 00 20</p>
-                        <p class="mb-2"><i data-feather="mail" class="inline mr-2"></i> contact@cabinet-haddad.com</p>
+                        <p>3 Av. Saint-Honoré d'Eylau, 75116 Paris</p>
+                        <p>+33 1 56 79 00 20</p>
+                        <p><a href="mailto:contact@cabinet-haddad.com">contact@cabinet-haddad.com</a></p>
                     </address>
                 </div>
             </div>
-            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+            <div class="retro-footer-bar">
                 <p>&copy; 2025 Cabinet Stéphane Haddad. Tous droits réservés.</p>
-                <p class="mt-2"><a href="mentions-legales.html" class="hover:text-gray-300">Mentions légales</a></p>
+                <p><a href="mentions-legales.html">Mentions légales</a></p>
             </div>
-        </div>
-    </footer>
+        </footer>
+    </div>
 
     <script>
-        AOS.init({
-            duration: 800,
-            easing: 'ease-in-out',
-            once: true
-        });
-
-        // Mobile menu toggle
-        document.getElementById('mobile-menu-button').addEventListener('click', function () {
-            const menu = document.getElementById('mobile-menu');
-            menu.classList.toggle('hidden');
-        });
-
-        // Accordion functionality
-        document.querySelectorAll('.accordion-header').forEach(header => {
-            header.addEventListener('click', () => {
-                const item = header.parentElement;
-                const content = header.nextElementSibling;
-                const icon = header.querySelector('.accordion-icon');
-
-                // Toggle current item
-                content.classList.toggle('active');
-                icon.classList.toggle('active');
-
-                // Close other items
-                document.querySelectorAll('.accordion-item').forEach(otherItem => {
-                    if (otherItem !== item) {
-                        otherItem.querySelector('.accordion-content').classList.remove('active');
-                        otherItem.querySelector('.accordion-icon').classList.remove('active');
+        document.addEventListener('DOMContentLoaded', function () {
+            function setupAccordion(header) {
+                function toggle() {
+                    var item = header.parentElement;
+                    var content = header.nextElementSibling;
+                    var icon = header.querySelector('.accordion-icon');
+                    if (!content) return;
+                    content.classList.toggle('active');
+                    if (icon) icon.classList.toggle('active');
+                    document.querySelectorAll('.accordion-item').forEach(function (otherItem) {
+                        if (otherItem !== item) {
+                            var c = otherItem.querySelector('.accordion-content');
+                            var ic = otherItem.querySelector('.accordion-icon');
+                            if (c) c.classList.remove('active');
+                            if (ic) ic.classList.remove('active');
+                        }
+                    });
+                }
+                header.addEventListener('click', toggle);
+                header.addEventListener('keydown', function (e) {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        toggle();
                     }
                 });
-            });
+            }
+            document.querySelectorAll('.accordion-header').forEach(setupAccordion);
         });
-
-        feather.replace();
     </script>
 </body>
-
-<script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const dropdown = document.querySelector('.cabinet-dropdown');
-        const checkbox = document.getElementById('dropdown-cabinet');
-
-        if (dropdown && checkbox) {
-            document.addEventListener('click', (e) => {
-                // Si on clique en dehors du dropdown -> fermer
-                if (!dropdown.contains(e.target)) {
-                    checkbox.checked = false;
-                }
-            });
-        }
-    });
-</script>
 
 </html>
